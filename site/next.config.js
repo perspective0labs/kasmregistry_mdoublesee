@@ -11,7 +11,7 @@ const nextConfig = {
     contactUrl: 'https://github.com/perspective0labs/kasmregistry_mdoublesee/issues',
   },
   reactStrictMode: true,
-  basePath: '/kasmregistry_mdoublesee/1.0',
+  basePath: '/kasmregistry_mdoublesee/1.1',
   trailingSlash: true,
   images: {
     unoptimized: true,
