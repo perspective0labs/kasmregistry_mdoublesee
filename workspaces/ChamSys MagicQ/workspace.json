@@ -1,0 +1,61 @@
+{
+  "friendly_name": "ChamSys MagicQ",
+  "description": "ChamSys MagicQ professional lighting console software. Full 64-universe DMX control, visualiser, and fixture library. Shows persist across sessions.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "magicq.png",
+  "categories": [
+    "Entertainment",
+    "Media Production"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "run_config": {
+    "environment": {
+      "KASM_PROFILE_PATH": "/mnt/kasm_profiles/{username}/{image_id}"
+    },
+    "volume_mappings": {
+      "/mnt/kasm_profiles/{username}/{image_id}": {
+        "bind": "/mnt/kasm_profiles",
+        "mode": "rw"
+      }
+    }
+  },
+  "persistent_profile_config": {
+    "enabled": true,
+    "profile_path": "/mnt/kasm_profiles/{username}/{image_id}",
+    "max_size_mb": 2048
+  },
+  "cores": 2,
+  "memory": 3072,
+  "notes": "Shows are stored persistently under ~/MagicQ/shows via a volume mount. Heads and personalities are pre-expanded in the image. MagicQ PC edition — 64 universes fully enabled.",
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "ghcr.io/perspective0labs/magicq-kasm:latest",
+      "uncompressed_size_mb": 3500,
+      "available_tags": [
+        "latest",
+        "1.9.7.4"
+      ]
+    },
+    {
+      "version": "1.17.x",
+      "image": "ghcr.io/perspective0labs/magicq-kasm:latest",
+      "uncompressed_size_mb": 3500,
+      "available_tags": [
+        "latest",
+        "1.9.7.4"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/magicq-kasm:latest",
+      "uncompressed_size_mb": 3500,
+      "available_tags": [
+        "latest",
+        "1.9.7.4"
+      ]
+    }
+  ]
+}
