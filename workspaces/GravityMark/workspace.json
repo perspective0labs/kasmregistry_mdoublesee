@@ -1,0 +1,23 @@
+{
+  "friendly_name": "GravityMark",
+  "description": "GravityMark GPU benchmark \u2014 requires a GPU-capable Kasm agent.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "grv.svg",
+  "categories": [
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/gravitymark:latest",
+      "uncompressed_size_mb": 4000,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ],
+  "notes": "Requires GPU agent (gpu_count \u2265 1). Will not start on CPU-only agents."
+}
