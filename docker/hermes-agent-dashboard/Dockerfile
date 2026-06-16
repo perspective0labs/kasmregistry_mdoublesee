@@ -8,10 +8,13 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Clone, install and build the Kori-x hermes-dashboard
-RUN git clone --depth=1 https://github.com/Kori-x/hermes-dashboard.git /opt/hermes-dashboard && \
-    cd /opt/hermes-dashboard && \
-    npm ci --prefer-offline && \
-    HERMES_HOME=/opt/data ./install.sh
+RUN git clone --depth=1 https://github.com/Kori-x/hermes-dashboard.git /opt/hermes-dashboard
+
+WORKDIR /opt/hermes-dashboard
+
+RUN npm install
+
+RUN HERMES_HOME=/opt/data bash ./install.sh
 
 # Register kori-dashboard as an s6-overlay v3 longrun service
 RUN mkdir -p /etc/s6-overlay/s6-rc.d/kori-dashboard/dependencies.d && \
