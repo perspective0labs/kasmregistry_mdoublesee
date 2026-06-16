@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libudev1 \
         libusb-1.0-0 \
         libftdi1-2 \
+        liblzo2-2 \
         xvfb \
         x11-utils \
     && apt-get clean \
@@ -35,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # ── Install MagicQ ───────────────────────────────────────────────────────────
 COPY magicq_linux_amd64.deb /tmp/magicq.deb
-RUN dpkg -i /tmp/magicq.deb || (apt-get install -f -y && dpkg -i /tmp/magicq.deb) \
+RUN dpkg -i /tmp/magicq.deb; apt-get install -f -y; dpkg -i /tmp/magicq.deb \
     && rm /tmp/magicq.deb
 
 # ── First-launch under Xvfb: expands heads/personality library ───────────────
