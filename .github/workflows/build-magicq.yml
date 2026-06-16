@@ -4,7 +4,7 @@ on:
   push:
     branches: ["1.1"]
     paths:
-      - "docker/magicq/**"
+      - ".github/workflows/build-magicq.yml"
   workflow_dispatch:
     inputs:
       magicq_version:
@@ -20,7 +20,12 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout private docker-builds repo
+        uses: actions/checkout@v4
+        with:
+          repository: perspective0labs/docker-builds
+          ssh-key: ${{ secrets.DOCKER_BUILDS_DEPLOY_KEY }}
+          path: docker-builds
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -33,7 +38,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Download MagicQ Linux .deb from ChamSys
-        working-directory: docker/magicq
+        working-directory: docker-builds/magicq
         run: |
           echo "Logging in to ChamSys..."
           curl -s -c /tmp/mq_cookies.txt \
@@ -41,34 +46,28 @@ jobs:
             -d "username=${{ secrets.CHAMSYS_USER }}&password=${{ secrets.CHAMSYS_PASS }}&perm_login=1" \
             -L -o /tmp/mq_login.html
 
-          echo "Downloading MagicQ Linux stable..."
-          # Fetch download page to get current stable URL (cache param rotates)
+          echo "Fetching download page for latest stable URL..."
           curl -s -c /tmp/mq_cookies.txt -b /tmp/mq_cookies.txt \
             "https://secure.chamsys.co.uk/mqdownload/" -o /tmp/mq_dl.html
 
           LINUX_URL=$(grep -oP "https://secure\.chamsys\.co\.uk/bugtracker/download_file\.php\?file_id=0[^']+platform=linux_amd64[^']+" /tmp/mq_dl.html \
             | head -1 | sed 's/&amp;/\&/g')
 
-          echo "URL: $LINUX_URL"
-
+          echo "Downloading: $LINUX_URL"
           curl -L -c /tmp/mq_cookies.txt -b /tmp/mq_cookies.txt \
-            "$LINUX_URL" \
-            -o magicq_linux_amd64.deb \
-            --progress-bar
+            "$LINUX_URL" -o magicq_linux_amd64.deb --progress-bar
 
           ls -lh magicq_linux_amd64.deb
           file magicq_linux_amd64.deb
 
       - name: Set version tag
         id: version
-        run: |
-          VERSION="${{ github.event.inputs.magicq_version || '1.9.7.4' }}"
-          echo "tag=${VERSION}" >> $GITHUB_OUTPUT
+        run: echo "tag=${{ github.event.inputs.magicq_version || '1.9.7.4' }}" >> $GITHUB_OUTPUT
 
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: docker/magicq
+          context: docker-builds/magicq
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/magicq-kasm:latest
