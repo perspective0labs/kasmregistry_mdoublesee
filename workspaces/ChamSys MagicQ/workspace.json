@@ -12,7 +12,7 @@
   ],
   "run_config": {
     "environment": {
-      "KASM_PROFILE_PATH": "/mnt/kasm_profiles/{username}/{image_id}"
+      "KASM_PROFILE_PATH": "/{username}/chamsys-magicq"
     }
   },
   "persistent_profile_config": {
