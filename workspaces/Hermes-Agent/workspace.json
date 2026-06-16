@@ -1,0 +1,25 @@
+{
+  "friendly_name": "Hermes Agent",
+  "description": "NousResearch Hermes Agent - autonomous AI agent runtime built on the Hermes model series for tool use, reasoning, and multi-step task execution.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "hermes-agent.svg",
+  "categories": [
+    "AI",
+    "Development"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.17.x",
+      "image": "nousresearch/hermes-agent:latest",
+      "uncompressed_size_mb": 3400,
+      "available_tags": [
+        "latest",
+        "main",
+        "v2026.6.5"
+      ]
+    }
+  ]
+}
