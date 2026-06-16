@@ -1,0 +1,21 @@
+{
+  "friendly_name": "Home Assistant",
+  "description": "Open-source home automation platform. Control smart home devices, create automations, and monitor your home from a unified web interface on port 8123.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "home-assistant.svg",
+  "categories": [
+    "Automation",
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.17.x",
+      "image": "homeassistant/home-assistant:stable",
+      "uncompressed_size_mb": 2200
+    }
+  ]
+}
