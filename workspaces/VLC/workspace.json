@@ -1,0 +1,23 @@
+{
+  "friendly_name": "VLC Media Player",
+  "description": "VLC media player streamed via Kasm for playing video and audio.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "vlc.svg",
+  "categories": [
+    "Media",
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/vlc:latest",
+      "uncompressed_size_mb": 2800,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
