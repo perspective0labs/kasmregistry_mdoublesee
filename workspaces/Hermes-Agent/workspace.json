@@ -12,7 +12,7 @@
   ],
   "compatibility": [
     {
-      "version": "1.17.x",
+      "version": "1.18.x",
       "image": "nousresearch/hermes-agent:latest",
       "uncompressed_size_mb": 3400,
       "available_tags": [
