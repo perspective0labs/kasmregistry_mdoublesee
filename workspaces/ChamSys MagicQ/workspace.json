@@ -15,6 +15,11 @@
       "KASM_PROFILE_PATH": "/{username}/chamsys-magicq"
     }
   },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c \"/opt/magicq/runmagicq.sh\""
+    }
+  },
   "persistent_profile_config": {
     "enabled": true,
     "profile_path": "/mnt/kasm_profiles/{username}/{image_id}",
