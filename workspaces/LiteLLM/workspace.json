@@ -20,7 +20,9 @@
     "volumes": {
       "/{username}/litellm": {
         "bind": "/app/config",
-        "mode": "ro"
+        "mode": "ro",
+        "uid": 1000,
+        "gid": 1000
       }
     }
   },
