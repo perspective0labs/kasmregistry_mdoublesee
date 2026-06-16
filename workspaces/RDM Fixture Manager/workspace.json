@@ -19,7 +19,9 @@
     "volumes": {
       "/{username}/rdm-fixture-manager": {
         "bind": "/app/data",
-        "mode": "rw"
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
       }
     }
   },
