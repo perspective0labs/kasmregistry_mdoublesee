@@ -11,6 +11,24 @@
     "amd64",
     "arm64"
   ],
+  "notes": "Local LLM (qwen2.5-coder:7b-32k via Ollama) is the default model \u2014 no API credits consumed.\n\nFor full Claude power, run `claude-ai` instead of `claude` to bypass the local proxy and use your claude.ai OAuth credentials.\n\nRequires LiteLLM proxy running in WSL2 (systemd service: litellm.service) and Ollama running on the Windows host.",
+  "run_config": {
+    "environment": {
+      "ANTHROPIC_BASE_URL": "http://172.17.0.1:4001",
+      "ANTHROPIC_API_KEY": "sk-local"
+    },
+    "volumes": {
+      "/mnt/c/Users/chris/.claude": {
+        "bind": "/home/kasm-user/.claude",
+        "mode": "rw"
+      }
+    }
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c \"echo 'alias claude-ai=\\\"ANTHROPIC_BASE_URL= ANTHROPIC_API_KEY= claude\\\"' >> /home/kasm-user/.bashrc 2>/dev/null; bash\""
+    }
+  },
   "compatibility": [
     {
       "version": "1.18.x",
