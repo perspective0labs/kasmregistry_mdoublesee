@@ -1,0 +1,22 @@
+{
+  "friendly_name": "KasmOS",
+  "description": "KasmOS custom desktop environment.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "kos.svg",
+  "categories": [
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/kasmos:latest",
+      "uncompressed_size_mb": 3800,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
