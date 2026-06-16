@@ -1,0 +1,23 @@
+{
+  "friendly_name": "Audacity",
+  "description": "Audacity audio editor \u2014 record, edit, and export audio in a browser-streamed desktop.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "aud.svg",
+  "categories": [
+    "Utilities",
+    "Media"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/audacity:latest",
+      "uncompressed_size_mb": 3200,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
