@@ -13,12 +13,6 @@
   "run_config": {
     "environment": {
       "KASM_PROFILE_PATH": "/mnt/kasm_profiles/{username}/{image_id}"
-    },
-    "volume_mappings": {
-      "/mnt/kasm_profiles/{username}/{image_id}": {
-        "bind": "/mnt/kasm_profiles",
-        "mode": "rw"
-      }
     }
   },
   "persistent_profile_config": {
@@ -28,7 +22,7 @@
   },
   "cores": 2,
   "memory": 3072,
-  "notes": "Shows are stored persistently under ~/MagicQ/shows via a volume mount. Heads and personalities are pre-expanded in the image. MagicQ PC edition — 64 universes fully enabled.",
+  "notes": "Shows are stored persistently under ~/MagicQ/shows. Heads and personalities are pre-expanded in the image. MagicQ PC edition - 64 universes fully enabled.",
   "compatibility": [
     {
       "version": "1.16.x",
