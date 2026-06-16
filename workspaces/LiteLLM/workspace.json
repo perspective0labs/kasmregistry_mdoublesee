@@ -13,7 +13,7 @@
   ],
   "compatibility": [
     {
-      "version": "1.17.x",
+      "version": "1.18.x",
       "image": "litellm/litellm:v1.88.2",
       "uncompressed_size_mb": 1100,
       "available_tags": [
