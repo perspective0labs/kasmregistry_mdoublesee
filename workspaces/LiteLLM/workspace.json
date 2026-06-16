@@ -11,6 +11,24 @@
     "amd64",
     "arm64"
   ],
+  "notes": "Configured to route all requests to local Ollama (qwen2.5-coder:7b-32k) via the WSL2 host at 172.22.48.1:11434.\n\nAnthropics fallback: set ANTHROPIC_API_KEY in the environment to enable.\n\nProxy API key: sk-local\nProxy port: 4000 (inside container)\nSet Kasm Proxy Port to 4000 for API access.",
+  "run_config": {
+    "environment": {
+      "LITELLM_MASTER_KEY": "sk-local",
+      "LITELLM_LOG": "WARNING"
+    },
+    "volumes": {
+      "/home/chris/.config/litellm": {
+        "bind": "/app/config",
+        "mode": "ro"
+      }
+    }
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c \"litellm --config /app/config/config.yaml --port 4000 --host 0.0.0.0\""
+    }
+  },
   "compatibility": [
     {
       "version": "1.18.x",
