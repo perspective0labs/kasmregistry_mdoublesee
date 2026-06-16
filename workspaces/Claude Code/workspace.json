@@ -20,7 +20,9 @@
     "volumes": {
       "/{username}/claude-code": {
         "bind": "/home/kasm-user/.claude",
-        "mode": "rw"
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
       }
     }
   },
@@ -35,10 +37,8 @@
       "image": "kasmweb/claude-code:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 5000,
       "available_tags": [
-        "develop",
-        "latest",
-        "1.18.0-rolling-weekly",
-        "1.19.0-rolling-weekly"
+        "1.19.0-rolling-weekly",
+        "1.18.0-rolling-weekly"
       ]
     }
   ]
