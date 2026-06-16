@@ -1,23 +1,29 @@
 {
   "friendly_name": "Claude Code (Qwen)",
-  "description": "Claude Code CLI routed through a local LiteLLM proxy running qwen2.5-coder:7b via Ollama \u2014 no API credits consumed.",
-  "docker_registry": "https://index.docker.io/v1/",
+  "description": "Claude Code CLI with Ollama + qwen2.5-coder:7b running inside the container \u2014 GPU-accelerated, no external proxy needed.",
+  "docker_registry": "https://ghcr.io",
   "image_src": "claude-code.svg",
   "categories": [
     "Development",
     "AI"
   ],
   "architecture": [
-    "amd64",
-    "arm64"
+    "amd64"
   ],
-  "notes": "Uses qwen2.5-coder:7b-32k (Ollama \u2192 LiteLLM proxy at 172.17.0.1:4001). No API key required.\n\nRequires LiteLLM proxy running in WSL2 (systemd: litellm.service) and Ollama on the Windows host.",
+  "notes": "Ollama and LiteLLM start automatically inside the container. First launch pulls qwen2.5-coder:7b (~4.7 GB) \u2014 subsequent launches use the cached model from the ollama-models volume.\n\nRequires NVIDIA GPU passthrough enabled in Kasm (nvidia runtime). Model choice can be overridden via the OLLAMA_MODEL environment variable.",
   "run_config": {
     "environment": {
-      "ANTHROPIC_BASE_URL": "http://172.17.0.1:4001",
-      "ANTHROPIC_API_KEY": "sk-local"
+      "ANTHROPIC_BASE_URL": "http://localhost:4001",
+      "ANTHROPIC_API_KEY": "sk-local",
+      "OLLAMA_MODEL": "qwen2.5-coder:7b",
+      "NVIDIA_VISIBLE_DEVICES": "all",
+      "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
     },
     "volumes": {
+      "/{username}/ollama-models": {
+        "bind": "/root/.ollama",
+        "mode": "rw"
+      },
       "/{username}/claude-code": {
         "bind": "/home/kasm-user/.claude",
         "mode": "rw",
@@ -28,17 +34,16 @@
   },
   "exec_config": {
     "go": {
-      "cmd": "bash"
+      "cmd": "bash -c \"/usr/local/bin/start-services.sh\""
     }
   },
   "compatibility": [
     {
       "version": "1.18.x",
-      "image": "kasmweb/claude-code:1.19.0-rolling-weekly",
-      "uncompressed_size_mb": 5000,
+      "image": "ghcr.io/perspective0labs/claude-code-qwen:latest",
+      "uncompressed_size_mb": 8000,
       "available_tags": [
-        "1.19.0-rolling-weekly",
-        "1.18.0-rolling-weekly"
+        "latest"
       ]
     }
   ]
