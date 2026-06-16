@@ -1,6 +1,6 @@
 {
   "friendly_name": "Hermes Agent",
-  "description": "NousResearch Hermes Agent with Kori-x real-time dashboard. Runs the agent gateway (port 8642), built-in dashboard (port 9119), and Kori-x monitoring UI (port 5173).",
+  "description": "NousResearch Hermes Agent with Kori-x real-time dashboard. Built-in s6-overlay supervision runs the gateway, built-in dashboard, and Kori-x monitoring UI together in one container.",
   "docker_registry": "https://ghcr.io",
   "image_src": "hermes-agent.svg",
   "categories": [
@@ -10,6 +10,7 @@
   "architecture": [
     "amd64"
   ],
+  "notes": "Set Proxy Port to 5173 for the Kori-x monitoring dashboard, or 9119 for the built-in config/session dashboard, or 8642 for raw API access. Mount a persistent volume at /opt/data to preserve config, API keys, sessions, skills, and memories across workspace restarts. Ports: 8642 (OpenAI-compatible API + health), 9119 (built-in dashboard), 5173 (Kori-x UI), 3001 (Kori-x WebSocket), 3002 (Kori-x wiki API).",
   "run_config": {
     "hostname": "hermes",
     "environment": {
@@ -18,6 +19,17 @@
       "API_SERVER_HOST": "0.0.0.0",
       "HERMES_HOME": "/opt/data",
       "HERMES_DASHBOARD_DIR": "/opt/hermes-dashboard"
+    },
+    "volumes": {
+      "/opt/data": {
+        "bind": "/opt/data",
+        "mode": "rw"
+      }
+    }
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c \"/init\""
     }
   },
   "compatibility": [
