@@ -1,6 +1,6 @@
 {
   "friendly_name": "Claude Code",
-  "description": "Ubuntu Jammy desktop with Claude Code CLI \u2014 Anthropic's AI coding assistant accessible directly from a browser-streamed terminal.",
+  "description": "Ubuntu Jammy desktop with Claude Code CLI - Anthropic AI coding assistant accessible from a browser-streamed terminal.",
   "docker_registry": "https://index.docker.io/v1/",
   "image_src": "claude-code.svg",
   "categories": [
