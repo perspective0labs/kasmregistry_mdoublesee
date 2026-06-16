@@ -1,0 +1,23 @@
+{
+  "friendly_name": "Obsidian",
+  "description": "Obsidian knowledge base and markdown note-taking app.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "obs.svg",
+  "categories": [
+    "Utilities",
+    "Development"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/obsidian:latest",
+      "uncompressed_size_mb": 3200,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
