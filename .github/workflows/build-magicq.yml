@@ -46,7 +46,7 @@ jobs:
           curl -s -c /tmp/mq_cookies.txt -b /tmp/mq_cookies.txt \
             "https://secure.chamsys.co.uk/mqdownload/" -o /tmp/mq_dl.html
 
-          LINUX_URL=$(grep -oP 'https://secure\.chamsys\.co\.uk/bugtracker/download_file\.php\?file_id=0[^"]+platform=linux_amd64[^"]+' /tmp/mq_dl.html \
+          LINUX_URL=$(grep -oP "https://secure\.chamsys\.co\.uk/bugtracker/download_file\.php\?file_id=0[^']+platform=linux_amd64[^']+" /tmp/mq_dl.html \
             | head -1 | sed 's/&amp;/\&/g')
 
           echo "URL: $LINUX_URL"
