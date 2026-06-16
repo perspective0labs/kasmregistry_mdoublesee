@@ -17,7 +17,7 @@
       "DB_PATH": "/app/data/shows/default.db"
     },
     "volumes": {
-      "/opt/rdm-data": {
+      "/{username}/rdm-fixture-manager": {
         "bind": "/app/data",
         "mode": "rw"
       }
