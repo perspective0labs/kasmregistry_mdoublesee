@@ -23,7 +23,7 @@
       "OPENAI_API_KEY": "sk-local"
     },
     "volumes": {
-      "/opt/data": {
+      "/{username}/hermes-agent": {
         "bind": "/opt/data",
         "mode": "rw"
       }
