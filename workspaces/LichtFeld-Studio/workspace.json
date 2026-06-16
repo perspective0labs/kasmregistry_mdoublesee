@@ -1,0 +1,24 @@
+{
+  "friendly_name": "LichtFeld Studio",
+  "description": "LichtFeld Studio \u2014 AI-assisted creative environment. Requires GPU agent.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "lch.svg",
+  "categories": [
+    "Development",
+    "AI"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/lichtfeld-studio:latest",
+      "uncompressed_size_mb": 6000,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ],
+  "notes": "Requires GPU agent (gpu_count \u2265 1). Will not start on CPU-only agents."
+}
