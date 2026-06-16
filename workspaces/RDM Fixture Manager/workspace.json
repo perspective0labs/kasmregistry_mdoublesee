@@ -1,0 +1,36 @@
+{
+  "friendly_name": "RDM Fixture Manager",
+  "description": "Professional lighting fixture management via RDM (ANSI E1.20) over ArtNet/sACN. Integrates with grandMA2 (Telnet) and grandMA3 (OSC), imports MVR files for fixture layout, runs ArtPoll node discovery, and includes a DHCP server for lighting network setup.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "rdm-fixture-manager.svg",
+  "categories": [
+    "Utilities",
+    "Development"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "notes": "IMPORTANT: This workspace requires --network=host (already set) for ArtNet UDP broadcast and sACN multicast to reach the lighting rig.\n\nPort 80: RDM Fixture Manager web UI\n/ola/ proxies the OLA daemon web interface on port 9090\n\nA host volume /opt/rdm-data is mounted at /app/data for persistent show files.\n\nThe host must be on the same subnet as your DMX/ArtNet nodes (Luminex, ELC, etc.).",
+  "run_config": {
+    "network_mode": "host",
+    "environment": {
+      "DB_PATH": "/app/data/shows/default.db"
+    },
+    "volumes": {
+      "/opt/rdm-data": {
+        "bind": "/app/data",
+        "mode": "rw"
+      }
+    }
+  },
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/rdm-fixture-manager:latest",
+      "uncompressed_size_mb": 1800,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
