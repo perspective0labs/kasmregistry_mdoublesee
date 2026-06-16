@@ -1,0 +1,21 @@
+{
+  "friendly_name": "LiteLLM",
+  "description": "LiteLLM Proxy - a unified API gateway for 100+ LLMs including OpenAI, Anthropic, Gemini and local models. Exposes an OpenAI-compatible endpoint on port 4000.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "litellm.svg",
+  "categories": [
+    "AI",
+    "Development"
+  ],
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.17.x",
+      "image": "litellm/litellm:v1.88.2",
+      "uncompressed_size_mb": 1100
+    }
+  ]
+}
