@@ -1,0 +1,23 @@
+{
+  "friendly_name": "Brave Browser",
+  "description": "Privacy-focused Brave browser streamed via Kasm.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "brv.svg",
+  "categories": [
+    "Browser",
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/brave:latest",
+      "uncompressed_size_mb": 3500,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
