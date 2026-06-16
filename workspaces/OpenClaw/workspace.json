@@ -1,0 +1,22 @@
+{
+  "friendly_name": "OpenClaw",
+  "description": "OpenClaw streamed game environment.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "clw.svg",
+  "categories": [
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/openclaw:latest",
+      "uncompressed_size_mb": 18000,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
