@@ -1,0 +1,7 @@
+#!/command/execlineb -P
+foreground { s6-echo "Starting Kori-x Hermes Dashboard..." }
+cd /opt/hermes-dashboard
+s6-setenv HOME /root
+s6-setenv HERMES_HOME /opt/data
+s6-setenv HERMES_DASHBOARD_DIR /opt/hermes-dashboard
+exec npm run dev
