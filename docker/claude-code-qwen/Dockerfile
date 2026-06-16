@@ -2,6 +2,9 @@ FROM kasmweb/claude-code:1.19.0-rolling-weekly
 
 USER root
 
+# zstd is required by the Ollama installer
+RUN apt-get update && apt-get install -y --no-install-recommends zstd curl && rm -rf /var/lib/apt/lists/*
+
 # Install Ollama
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
