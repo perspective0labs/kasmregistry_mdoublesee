@@ -18,6 +18,7 @@
       "uncompressed_size_mb": 5000,
       "available_tags": [
         "develop",
+        "latest",
         "1.18.0-rolling-weekly",
         "1.19.0-rolling-weekly"
       ]
