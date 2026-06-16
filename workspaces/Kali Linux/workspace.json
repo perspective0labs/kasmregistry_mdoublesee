@@ -1,0 +1,23 @@
+{
+  "friendly_name": "Kali Linux",
+  "description": "Kali Linux rolling desktop for penetration testing and security research.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "kali.svg",
+  "categories": [
+    "Development",
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/kali-linux:latest",
+      "uncompressed_size_mb": 5000,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
