@@ -1,0 +1,23 @@
+{
+  "friendly_name": "Terminal",
+  "description": "Minimal Linux terminal workspace.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "term.svg",
+  "categories": [
+    "Development",
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/terminal:latest",
+      "uncompressed_size_mb": 1800,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
