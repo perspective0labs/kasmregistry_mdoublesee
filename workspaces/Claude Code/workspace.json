@@ -1,0 +1,26 @@
+{
+  "friendly_name": "Claude Code",
+  "description": "Ubuntu Jammy desktop with Claude Code CLI \u2014 Anthropic's AI coding assistant accessible directly from a browser-streamed terminal.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "claude-code.svg",
+  "categories": [
+    "Development",
+    "AI"
+  ],
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.17.x",
+      "image": "kasmweb/claude-code:1.19.0-rolling-weekly",
+      "uncompressed_size_mb": 5000,
+      "available_tags": [
+        "develop",
+        "1.18.0-rolling-weekly",
+        "1.19.0-rolling-weekly"
+      ]
+    }
+  ]
+}
