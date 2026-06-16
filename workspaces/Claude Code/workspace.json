@@ -18,7 +18,7 @@
       "ANTHROPIC_API_KEY": "sk-local"
     },
     "volumes": {
-      "/mnt/c/Users/chris/.claude": {
+      "/{username}/claude-code": {
         "bind": "/home/kasm-user/.claude",
         "mode": "rw"
       }
