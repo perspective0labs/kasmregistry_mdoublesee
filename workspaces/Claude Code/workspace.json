@@ -13,7 +13,7 @@
   ],
   "compatibility": [
     {
-      "version": "1.17.x",
+      "version": "1.18.x",
       "image": "kasmweb/claude-code:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 5000,
       "available_tags": [
