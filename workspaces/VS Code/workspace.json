@@ -1,0 +1,22 @@
+{
+  "friendly_name": "VS Code",
+  "description": "Visual Studio Code editor streamed via Kasm.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "vsc.svg",
+  "categories": [
+    "Development"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/vs-code:latest",
+      "uncompressed_size_mb": 3600,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
