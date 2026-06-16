@@ -22,7 +22,7 @@
   },
   "cores": 2,
   "memory": 3072,
-  "notes": "Shows are stored persistently under ~/MagicQ/shows. Heads and personalities are pre-expanded in the image. MagicQ PC edition - 64 universes fully enabled.",
+  "notes": "Shows are stored persistently under ~/MagicQ/shows. Heads and personalities are pre-expanded in the image. MagicQ PC edition \u2014 64 universes fully enabled.",
   "compatibility": [
     {
       "version": "1.16.x",
