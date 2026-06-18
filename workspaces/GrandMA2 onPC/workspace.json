@@ -1,0 +1,31 @@
+{
+  "friendly_name": "GrandMA2 onPC",
+  "description": "MA Lighting grandMA2 onPC v3.9.63.6 \u2014 full show control software running via Wine. Connects to grandMA2 consoles and NPUs over MA-Net2.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "grandma2.svg",
+  "categories": [
+    "Utilities"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "notes": "Requires Docker Run Config Override: {\"network_mode\": \"host\", \"user\": \"root\"} \u2014 host networking is mandatory for MA-Net2 multicast console discovery (UDP 6549). Art-Net on UDP 8000, sACN on UDP 5568. GrandMA2 onPC launches automatically on desktop open.",
+  "run_config": {
+    "network_mode": "host"
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c \"WINEPREFIX=/home/kasm-user/.wine wine '/home/kasm-user/.wine/drive_c/Program Files (x86)/MA Lighting Technologies/grandMA2 onPC/grandMA2 onPC.exe'\""
+    }
+  },
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/grandma2-onpc:3.9.63.6",
+      "uncompressed_size_mb": 6000,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
