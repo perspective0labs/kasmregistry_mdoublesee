@@ -1,4 +1,4 @@
-﻿{
+{
   "friendly_name": "SignalFlow",
   "description": "SignalFlow show-control, RDM, timecode, cuepoint, tracking and protocol workspace.",
   "image_src": "signalflow.svg",
@@ -43,7 +43,6 @@
   "memory": 4096,
   "gpu_count": 0
 }
-
 
 
 
