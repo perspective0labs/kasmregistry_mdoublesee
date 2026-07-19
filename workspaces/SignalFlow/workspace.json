@@ -1,0 +1,50 @@
+﻿{
+  "friendly_name": "SignalFlow",
+  "description": "SignalFlow show-control, RDM, timecode, cuepoint, tracking and protocol workspace.",
+  "image_src": "signalflow.svg",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/signalflow-kasm-workspace:2.24.0",
+      "uncompressed_size_mb": 4500,
+      "available_tags": [
+        "2.24.0",
+        "latest"
+      ]
+    }
+  ],
+  "categories": [
+    "Development",
+    "Productivity",
+    "Multimedia"
+  ],
+  "docker_registry": "https://ghcr.io",
+  "run_config": {
+    "environment": {
+      "SIGNALFLOW_DATA_DIR": "/home/kasm-user/signalflow-data",
+      "DB_PATH": "/home/kasm-user/signalflow-data/shows/default.db"
+    },
+    "volumes": {
+      "/{username}/signalflow": {
+        "bind": "/home/kasm-user/signalflow-data",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 0
+      }
+    },
+    "shm_size": "1gb"
+  },
+  "exec_config": {},
+  "notes": "Pulls from GHCR. If the image is private, add GHCR credentials to the Kasm agent before launch.",
+  "cores": 2,
+  "memory": 4096,
+  "gpu_count": 0
+}
+
+
+
+
+
