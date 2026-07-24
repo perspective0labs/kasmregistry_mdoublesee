@@ -34,11 +34,11 @@
   "compatibility": [
     {
       "version": "1.18.x",
-      "image": "litellm/litellm:v1.88.2",
+      "image": "litellm/litellm:v1.92.1",
       "uncompressed_size_mb": 1100,
       "available_tags": [
         "latest",
-        "v1.88.2"
+        "v1.92.1"
       ]
     }
   ]
