@@ -1,0 +1,40 @@
+{
+  "friendly_name": "Blender",
+  "description": "Blender — free and open source 3D creation suite. Modelling, sculpting, rigging, animation, simulation, rendering, compositing, motion tracking and video editing.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "blender.svg",
+  "categories": [
+    "Multimedia",
+    "Development"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "notes": "Projects are persisted in the /{username}/blender volume, bound to ~/Documents inside the session.\n\nCPU rendering (Cycles/EEVEE) works out of the box. GPU rendering (Cycles CUDA/OptiX) requires the NVIDIA Container Toolkit on the Kasm agent plus a GPU-enabled Workspace (gpu_count >= 1) — set NVIDIA_DRIVER_CAPABILITIES=all in the Workspace environment once GPU is available.",
+  "run_config": {
+    "volumes": {
+      "/{username}/blender": {
+        "bind": "/home/kasm-user/Documents",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      }
+    },
+    "shm_size": "1gb"
+  },
+  "cores": 4,
+  "memory": 8192,
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/blender:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 3935,
+      "available_tags": [
+        "latest",
+        "1.18.0-rolling-daily",
+        "1.18.0-rolling-weekly",
+        "1.18.0"
+      ]
+    }
+  ]
+}
