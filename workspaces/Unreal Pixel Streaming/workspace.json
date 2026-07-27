@@ -1,0 +1,44 @@
+{
+  "friendly_name": "Unreal Pixel Streaming",
+  "description": "Unreal Engine pixel streaming runtime — runs packaged UE projects and streams the rendered output. Runtime only, no editor.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "unreal-ps.svg",
+  "categories": [
+    "Development",
+    "Multimedia"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "notes": "Runtime only — this image contains no editor. Package your project in the Unreal Engine workspace, then mount or copy the packaged build into /{username}/unreal-packaged and launch it here.\n\nRequires GPU agent (gpu_count >= 1) and the NVIDIA Container Toolkit on the agent host.\n\nIMPORTANT: ghcr.io/epicgames/unreal-engine is NOT anonymously pullable — the Kasm agent needs GHCR credentials for an EpicGames-linked account.\n\nThe base image is small (~0.5 GB) because it ships runtime dependencies only; your packaged project supplies the content.\n\nThis is an Epic image, not a Kasm image — it carries no KasmVNC layer, so it is intended for headless streaming rather than a browser desktop.",
+  "run_config": {
+    "environment": {
+      "NVIDIA_DRIVER_CAPABILITIES": "all",
+      "NVIDIA_VISIBLE_DEVICES": "all"
+    },
+    "volumes": {
+      "/{username}/unreal-packaged": {
+        "bind": "/home/kasm-user/packaged",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      }
+    },
+    "shm_size": "2gb"
+  },
+  "cores": 4,
+  "memory": 8192,
+  "gpu_count": 1,
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/epicgames/unreal-engine:runtime-pixel-streaming",
+      "uncompressed_size_mb": 474,
+      "available_tags": [
+        "latest",
+        "runtime-pixel-streaming",
+        "runtime"
+      ]
+    }
+  ]
+}
