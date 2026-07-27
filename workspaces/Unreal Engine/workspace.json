@@ -1,0 +1,50 @@
+{
+  "friendly_name": "Unreal Engine",
+  "description": "Unreal Engine 5.8 editor (dev-slim) — full Linux editor and build tools for real-time 3D, virtual production and pixel streaming projects.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "unreal.svg",
+  "categories": [
+    "Development",
+    "Multimedia"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "notes": "Requires GPU agent (gpu_count >= 1) and the NVIDIA Container Toolkit installed on the agent host. Will not run usably on CPU-only agents.\n\nIMPORTANT: ghcr.io/epicgames/unreal-engine is NOT anonymously pullable. The Kasm agent must hold GHCR credentials for an account linked to the EpicGames GitHub organisation, or the pull fails.\n\nFirst pull is ~49 GB — allow time and disk headroom on the agent.\n\nProjects persist in /{username}/unreal (bound to ~/Documents). The shader cache is persisted separately at ~/.config/Epic; without it shaders recompile on every session.\n\nThis image is an Epic image, not a Kasm image — it carries no KasmVNC layer. If no desktop appears on launch, a wrapper image (FROM kasmweb/core-ubuntu-jammy + engine files) is required; see docker-builds.",
+  "run_config": {
+    "environment": {
+      "NVIDIA_DRIVER_CAPABILITIES": "all",
+      "NVIDIA_VISIBLE_DEVICES": "all"
+    },
+    "volumes": {
+      "/{username}/unreal": {
+        "bind": "/home/kasm-user/Documents",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      },
+      "/{username}/unreal-shadercache": {
+        "bind": "/home/kasm-user/.config/Epic",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      }
+    },
+    "shm_size": "2gb"
+  },
+  "cores": 4,
+  "memory": 16384,
+  "gpu_count": 1,
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/epicgames/unreal-engine:dev-slim-5.8",
+      "uncompressed_size_mb": 49000,
+      "available_tags": [
+        "latest",
+        "dev-slim-5.8",
+        "dev-slim-5.7"
+      ]
+    }
+  ]
+}
