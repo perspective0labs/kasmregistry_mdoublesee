@@ -1,7 +1,7 @@
 {
   "friendly_name": "VS Code",
   "description": "Visual Studio Code editor streamed via Kasm.",
-  "docker_registry": "https://ghcr.io",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "vsc.svg",
   "categories": [
     "Development"
@@ -20,10 +20,12 @@
     },
     {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/vs-code:latest",
+      "image": "kasmweb/vs-code:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 3600,
       "available_tags": [
-        "latest"
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily",
+        "1.19.0"
       ]
     }
   ]

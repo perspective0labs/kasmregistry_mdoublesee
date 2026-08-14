@@ -1,7 +1,7 @@
 {
   "friendly_name": "RetroArch",
   "description": "RetroArch multi-system emulator frontend streamed via Kasm.",
-  "docker_registry": "https://ghcr.io",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "ra.svg",
   "categories": [
     "Utilities",
@@ -21,10 +21,12 @@
     },
     {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/retroarch:latest",
+      "image": "kasmweb/retroarch:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 4500,
       "available_tags": [
-        "latest"
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily",
+        "1.19.0"
       ]
     }
   ]

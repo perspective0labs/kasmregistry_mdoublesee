@@ -1,7 +1,7 @@
 {
   "friendly_name": "AnythingLLM",
   "description": "AnythingLLM — all-in-one AI document chat and assistant platform.",
-  "docker_registry": "https://ghcr.io",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "llm.svg",
   "categories": [
     "AI",
@@ -21,7 +21,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/anythingllm:latest",
+      "image": "mintplexlabs/anythingllm:latest",
       "uncompressed_size_mb": 5000,
       "available_tags": [
         "latest"
