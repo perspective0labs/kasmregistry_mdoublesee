@@ -1,7 +1,7 @@
 {
   "friendly_name": "GrandMA2 onPC",
   "description": "MA Lighting grandMA2 onPC v3.9.63.6 — full show control software running via Wine. Connects to grandMA2 consoles and NPUs over MA-Net2.",
-  "docker_registry": "https://ghcr.io",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "grandma2.svg",
   "categories": [
     "Utilities"
@@ -9,7 +9,7 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Requires Docker Run Config Override: {\"network_mode\": \"host\", \"user\": \"root\"} — host networking is mandatory for MA-Net2 multicast console discovery (UDP 6549). Art-Net on UDP 8000, sACN on UDP 5568. GrandMA2 onPC launches automatically on desktop open.",
+  "notes": "Requires Docker Run Config Override: {\"network_mode\": \"host\", \"user\": \"root\"} — host networking is mandatory for MA-Net2 multicast console discovery (UDP 6549). Art-Net on UDP 8000, sACN on UDP 5568. GrandMA2 onPC launches automatically on desktop open.\n\n1.19 fallback uses KasmOS desktop because the original custom image is not currently present/publicly pullable. Replace with the native custom image once published.",
   "run_config": {
     "network_mode": "host"
   },
@@ -29,10 +29,12 @@
     },
     {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/grandma2-onpc:3.9.63.6",
+      "image": "kasmweb/kasmos-desktop:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 6000,
       "available_tags": [
-        "latest"
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily",
+        "1.19.0"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "friendly_name": "IW3",
   "description": "IW3 (Call of Duty) streamed desktop game — requires GPU agent.",
-  "docker_registry": "https://ghcr.io",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "iw3.svg",
   "categories": [
     "Utilities"
@@ -20,12 +20,14 @@
     },
     {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/iw3:latest",
+      "image": "kasmweb/kasmos-desktop:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 8000,
       "available_tags": [
-        "latest"
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily",
+        "1.19.0"
       ]
     }
   ],
-  "notes": "Requires GPU agent (gpu_count ≥ 1). Will not start on CPU-only agents."
+  "notes": "Requires GPU agent (gpu_count ≥ 1). Will not start on CPU-only agents.\n\n1.19 fallback uses KasmOS desktop because the original custom image is not currently present/publicly pullable. Replace with the native custom image once published."
 }
