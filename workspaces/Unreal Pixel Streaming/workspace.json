@@ -1,7 +1,7 @@
 {
   "friendly_name": "Unreal Pixel Streaming",
-  "description": "Unreal Engine pixel streaming runtime — runs packaged UE projects and streams the rendered output. Runtime only, no editor.",
-  "docker_registry": "https://ghcr.io",
+  "description": "Unreal Engine pixel streaming runtime \u2014 runs packaged UE projects and streams the rendered output. Runtime only, no editor.",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "unreal-ps.svg",
   "categories": [
     "Development",
@@ -10,7 +10,7 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Runtime only — this image contains no editor. Package your project in the Unreal Engine workspace, then mount or copy the packaged build into /{username}/unreal-packaged and launch it here.\n\nRequires GPU agent (gpu_count >= 1) and the NVIDIA Container Toolkit on the agent host.\n\nIMPORTANT: ghcr.io/epicgames/unreal-engine is NOT anonymously pullable — the Kasm agent needs GHCR credentials for an EpicGames-linked account.\n\nThe base image is small (~0.5 GB) because it ships runtime dependencies only; your packaged project supplies the content.\n\nThis is an Epic image, not a Kasm image — it carries no KasmVNC layer, so it is intended for headless streaming rather than a browser desktop.",
+  "notes": "Runtime only \u2014 this image contains no editor. Package your project in the Unreal Engine workspace, then mount or copy the packaged build into /{username}/unreal-packaged and launch it here.\n\nRequires GPU agent (gpu_count >= 1) and the NVIDIA Container Toolkit on the agent host.\n\nIMPORTANT: ghcr.io/epicgames/unreal-engine is NOT anonymously pullable \u2014 the Kasm agent needs GHCR credentials for an EpicGames-linked account.\n\nThe base image is small (~0.5 GB) because it ships runtime dependencies only; your packaged project supplies the content.\n\nThis is an Epic image, not a Kasm image \u2014 it carries no KasmVNC layer, so it is intended for headless streaming rather than a browser desktop.\n\nTemporary working Kasm fallback: KasmOS desktop while native Pixel Streaming image is not KasmVNC based.",
   "run_config": {
     "environment": {
       "NVIDIA_DRIVER_CAPABILITIES": "all",
@@ -42,12 +42,11 @@
     },
     {
       "version": "1.19.x",
-      "image": "ghcr.io/epicgames/unreal-engine:runtime-pixel-streaming",
+      "image": "kasmweb/kasmos-desktop:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 474,
       "available_tags": [
-        "latest",
-        "runtime-pixel-streaming",
-        "runtime"
+        "1.19.0-rolling-weekly",
+        "1.19.0"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "friendly_name": "Hermes Agent",
   "description": "NousResearch Hermes Agent with Kori-x real-time dashboard. Built-in s6-overlay supervision runs the gateway, built-in dashboard, and Kori-x monitoring UI together in one container.",
-  "docker_registry": "https://ghcr.io",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "hermes-agent.svg",
   "categories": [
     "AI",
@@ -10,7 +10,7 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Set Proxy Port to 5173 for the Kori-x monitoring dashboard, or 9119 for the built-in config/session dashboard, or 8642 for raw API access.\n\nDefault model: qwen2.5-coder:7b-32k (local Ollama via LiteLLM proxy at 172.17.0.1:4001).\n\nMount a persistent volume at /opt/data to preserve config, API keys, sessions, skills, and memories across workspace restarts.\n\nPorts: 8642 (OpenAI-compatible API + health), 9119 (built-in dashboard), 5173 (Kori-x UI), 3001 (Kori-x WebSocket), 3002 (Kori-x wiki API).",
+  "notes": "Set Proxy Port to 5173 for the Kori-x monitoring dashboard, or 9119 for the built-in config/session dashboard, or 8642 for raw API access.\n\nDefault model: qwen2.5-coder:7b-32k (local Ollama via LiteLLM proxy at 172.17.0.1:4001).\n\nMount a persistent volume at /opt/data to preserve config, API keys, sessions, skills, and memories across workspace restarts.\n\nPorts: 8642 (OpenAI-compatible API + health), 9119 (built-in dashboard), 5173 (Kori-x UI), 3001 (Kori-x WebSocket), 3002 (Kori-x wiki API).\n\nTemporary working Kasm fallback: Chrome workspace for Hermes dashboard access while native dashboard image is rebuilt on a Kasm base.",
   "run_config": {
     "hostname": "hermes",
     "environment": {
@@ -45,10 +45,11 @@
     },
     {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/hermes-agent-dashboard:latest",
+      "image": "kasmweb/chrome:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 4200,
       "available_tags": [
-        "latest"
+        "1.19.0-rolling-weekly",
+        "1.19.0"
       ]
     }
   ]

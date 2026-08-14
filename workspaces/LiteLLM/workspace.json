@@ -11,7 +11,7 @@
     "amd64",
     "arm64"
   ],
-  "notes": "Configured to route all requests to local Ollama (qwen2.5-coder:7b-32k) via the WSL2 host at 172.22.48.1:11434.\n\nAnthropics fallback: set ANTHROPIC_API_KEY in the environment to enable.\n\nProxy API key: sk-local\nProxy port: 4000 (inside container)\nSet Kasm Proxy Port to 4000 for API access.",
+  "notes": "Configured to route all requests to local Ollama (qwen2.5-coder:7b-32k) via the WSL2 host at 172.22.48.1:11434.\n\nAnthropics fallback: set ANTHROPIC_API_KEY in the environment to enable.\n\nProxy API key: sk-local\nProxy port: 4000 (inside container)\nSet Kasm Proxy Port to 4000 for API access.\n\nTemporary working Kasm fallback: Chrome workspace while LiteLLM service image is run separately or rebuilt on a Kasm base.",
   "run_config": {
     "environment": {
       "LITELLM_MASTER_KEY": "sk-local",
@@ -43,11 +43,11 @@
     },
     {
       "version": "1.19.x",
-      "image": "litellm/litellm:v1.92.1",
+      "image": "kasmweb/chrome:1.19.0-rolling-weekly",
       "uncompressed_size_mb": 1100,
       "available_tags": [
-        "latest",
-        "v1.92.1"
+        "1.19.0-rolling-weekly",
+        "1.19.0"
       ]
     }
   ]
