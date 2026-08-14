@@ -18,6 +18,14 @@
       "available_tags": [
         "latest"
       ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/perspective0labs/vlc:latest",
+      "uncompressed_size_mb": 2800,
+      "available_tags": [
+        "latest"
+      ]
     }
   ]
 }

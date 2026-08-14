@@ -45,6 +45,16 @@
         "dev-slim-5.8",
         "dev-slim-5.7"
       ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/epicgames/unreal-engine:dev-slim-5.8",
+      "uncompressed_size_mb": 49000,
+      "available_tags": [
+        "latest",
+        "dev-slim-5.8",
+        "dev-slim-5.7"
+      ]
     }
   ]
 }

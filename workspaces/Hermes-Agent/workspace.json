@@ -42,6 +42,14 @@
       "available_tags": [
         "latest"
       ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/perspective0labs/hermes-agent-dashboard:latest",
+      "uncompressed_size_mb": 4200,
+      "available_tags": [
+        "latest"
+      ]
     }
   ]
 }

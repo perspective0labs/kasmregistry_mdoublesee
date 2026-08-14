@@ -18,6 +18,14 @@
       "available_tags": [
         "latest"
       ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/perspective0labs/retroarch:latest",
+      "uncompressed_size_mb": 4500,
+      "available_tags": [
+        "latest"
+      ]
     }
   ]
 }

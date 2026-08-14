@@ -20,6 +20,15 @@
         "stable",
         "latest"
       ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "homeassistant/home-assistant:stable",
+      "uncompressed_size_mb": 2200,
+      "available_tags": [
+        "stable",
+        "latest"
+      ]
     }
   ]
 }

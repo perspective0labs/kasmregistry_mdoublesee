@@ -1,6 +1,6 @@
 {
   "friendly_name": "NotebookLM",
-  "description": "Google NotebookLM \u2014 AI-powered research assistant. Upload documents, PDFs, and notes, then ask questions and generate summaries with Gemini.",
+  "description": "Google NotebookLM — AI-powered research assistant. Upload documents, PDFs, and notes, then ask questions and generate summaries with Gemini.",
   "docker_registry": "https://ghcr.io",
   "image_src": "notebooklm.svg",
   "categories": [
@@ -37,6 +37,15 @@
     },
     {
       "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/notebooklm-kasm:latest",
+      "uncompressed_size_mb": 2000,
+      "available_tags": [
+        "latest",
+        "1.0.0"
+      ]
+    },
+    {
+      "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/notebooklm-kasm:latest",
       "uncompressed_size_mb": 2000,
       "available_tags": [

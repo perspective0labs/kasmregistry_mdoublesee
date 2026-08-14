@@ -1,6 +1,6 @@
 {
   "friendly_name": "Claude Code (Qwen)",
-  "description": "Claude Code CLI with Ollama + qwen2.5-coder:7b running inside the container \u2014 GPU-accelerated, no external proxy needed.",
+  "description": "Claude Code CLI with Ollama + qwen2.5-coder:7b running inside the container — GPU-accelerated, no external proxy needed.",
   "docker_registry": "https://ghcr.io",
   "image_src": "claude-code.svg",
   "categories": [
@@ -10,7 +10,7 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Ollama and LiteLLM start automatically inside the container. First launch pulls qwen2.5-coder:7b (~4.7 GB) \u2014 subsequent launches use the cached model from the ollama-models volume.\n\nRequires NVIDIA GPU passthrough enabled in Kasm (nvidia runtime). Model choice can be overridden via the OLLAMA_MODEL environment variable.",
+  "notes": "Ollama and LiteLLM start automatically inside the container. First launch pulls qwen2.5-coder:7b (~4.7 GB) — subsequent launches use the cached model from the ollama-models volume.\n\nRequires NVIDIA GPU passthrough enabled in Kasm (nvidia runtime). Model choice can be overridden via the OLLAMA_MODEL environment variable.",
   "run_config": {
     "environment": {
       "ANTHROPIC_BASE_URL": "http://localhost:4001",
@@ -40,6 +40,14 @@
   "compatibility": [
     {
       "version": "1.18.x",
+      "image": "ghcr.io/perspective0labs/claude-code-qwen:latest",
+      "uncompressed_size_mb": 8000,
+      "available_tags": [
+        "latest"
+      ]
+    },
+    {
+      "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/claude-code-qwen:latest",
       "uncompressed_size_mb": 8000,
       "available_tags": [

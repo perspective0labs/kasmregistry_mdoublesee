@@ -18,6 +18,14 @@
       "available_tags": [
         "latest"
       ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/perspective0labs/kali-linux:latest",
+      "uncompressed_size_mb": 5000,
+      "available_tags": [
+        "latest"
+      ]
     }
   ]
 }

@@ -17,6 +17,14 @@
       "available_tags": [
         "latest"
       ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/perspective0labs/vs-code:latest",
+      "uncompressed_size_mb": 3600,
+      "available_tags": [
+        "latest"
+      ]
     }
   ]
 }
