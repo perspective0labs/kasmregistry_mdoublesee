@@ -1,7 +1,7 @@
 {
   "friendly_name": "GrandMA2 onPC",
-  "description": "MA Lighting grandMA2 onPC v3.9.63.6 \u2014 show-control software running inside a Kasm Wine container. Connects to MA networks over host networking.",
-  "docker_registry": "https://index.docker.io/v1/",
+  "description": "MA Lighting grandMA2 onPC v3.9.63.6 — v3.9.63.6 under Wine in a Kasm 1.19 desktop container, with a persistent Wine prefix and host networking for MA-Net/Art-Net/sACN.",
+  "docker_registry": "https://ghcr.io",
   "image_src": "grandma2.svg",
   "categories": [
     "Utilities"
@@ -9,7 +9,7 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Wine container, not a Windows VM streaming tile. Host networking is enabled for MA-Net2 UDP 6549; Art-Net UDP 8000 and sACN UDP 5568. Put the official MA Lighting installer into the persistent /home/kasm-user/grandma-installers folder if the app binary is not already in the Wine prefix.",
+  "notes": "Kasm Wine container (not a Windows streaming tile). MA Lighting software is licensed and is NOT bundled: download gMA2onPC_v3.9.63.6.exe from https://www.malighting.com/downloads/products/grandma2/ and drop it in the persistent /home/kasm-user/grandma-installers folder, then relaunch — the launcher installs it into the persistent Wine prefix and auto-starts it thereafter. Host networking is enabled for MA-Net2 UDP 6549, Art-Net UDP 8000 and sACN UDP 5568.",
   "run_config": {
     "network_mode": "host",
     "environment": {
