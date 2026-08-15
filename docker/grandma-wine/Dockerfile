@@ -28,8 +28,10 @@ ENV DEBIAN_FRONTEND=noninteractive \
     GRANDMA_FLAVOUR="${GRANDMA_FLAVOUR}" \
     GRANDMA_VERSION="${GRANDMA_VERSION}"
 
-# WineHQ stable rather than the distro `wine64` package: Ubuntu 24.04 (noble)
-# dropped the `wine64` binary package name, and MA onPC needs a current Wine.
+# WineHQ stable rather than the distro wine package: the Kasm base tracks
+# Debian bookworm, whose `wine` is old, and Ubuntu noble dropped the `wine64`
+# binary package name entirely. Detect the distro (debian vs ubuntu) from
+# /etc/os-release so this works whichever base Kasm ships.
 RUN set -eux; \
     dpkg --add-architecture i386; \
     apt-get update; \
@@ -37,8 +39,14 @@ RUN set -eux; \
     mkdir -pm755 /etc/apt/keyrings; \
     wget -qO /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key; \
     . /etc/os-release; \
+    case "${ID}" in \
+      ubuntu) WINE_DISTRO=ubuntu ;; \
+      debian) WINE_DISTRO=debian ;; \
+      *)      WINE_DISTRO="${ID_LIKE%% *}" ;; \
+    esac; \
+    echo "WineHQ repo: ${WINE_DISTRO}/${VERSION_CODENAME}"; \
     wget -qO /etc/apt/sources.list.d/winehq.sources \
-      "https://dl.winehq.org/wine-builds/ubuntu/dists/${VERSION_CODENAME}/winehq-${VERSION_CODENAME}.sources"; \
+      "https://dl.winehq.org/wine-builds/${WINE_DISTRO}/dists/${VERSION_CODENAME}/winehq-${VERSION_CODENAME}.sources"; \
     apt-get update; \
     apt-get install -y --no-install-recommends "winehq-${WINE_BRANCH}" \
       winbind cabextract p7zip-full zenity xterm unzip curl procps; \
