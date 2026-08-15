@@ -64,6 +64,9 @@ jobs:
           echo "kasm_tag=$KASM_TAG" >> "$GITHUB_OUTPUT"
           echo "Building ${{ matrix.flavour }} $VERSION on $BASE"
 
+      - name: Launcher logic tests
+        run: bash docker/grandma-wine/test-launcher-logic.sh
+
       - name: Log in to GHCR
         # grandma2-onpc / grandma3-onpc are pre-existing private GHCR packages
         # that are not linked to this repo, so the ephemeral GITHUB_TOKEN is
@@ -97,7 +100,18 @@ jobs:
 
       - name: Verify pushed image
         run: |
-          docker pull "ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}:${{ steps.vars.outputs.version }}"
-          docker run --rm --entrypoint bash \
-            "ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}:${{ steps.vars.outputs.version }}" \
-            -lc 'wine --version && test -x /usr/local/bin/start-grandma-wine.sh && bash -n /usr/local/bin/start-grandma-wine.sh && echo VERIFY_OK'
+          IMG="ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}:${{ steps.vars.outputs.version }}"
+          docker pull "$IMG"
+          docker run --rm --entrypoint bash "$IMG" -lc '
+            set -e
+            wine --version
+            test -x /usr/local/bin/start-grandma-wine.sh
+            bash -n /usr/local/bin/start-grandma-wine.sh
+            # The Aug-15 images shipped a launcher that sent InnoSetup switches
+            # to NSIS installers and picked installers[0] from a folder shared
+            # by both flavours. Fail the build if either regression comes back.
+            grep -q "installer_kind=\"nsis\"" /usr/local/bin/start-grandma-wine.sh
+            grep -q "matches_flavour"        /usr/local/bin/start-grandma-wine.sh
+            grep -q "_mac_"                  /usr/local/bin/start-grandma-wine.sh
+            ! grep -q "installers\[0\]"      /usr/local/bin/start-grandma-wine.sh
+            echo VERIFY_OK'
