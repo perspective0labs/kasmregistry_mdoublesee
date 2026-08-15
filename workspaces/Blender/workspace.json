@@ -22,8 +22,8 @@
     },
     "shm_size": "1gb"
   },
-  "cores": 4,
-  "memory": 8192,
+  "cores": 1,
+  "memory": 2048,
   "compatibility": [
     {
       "version": "1.18.x",
@@ -38,7 +38,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/blender:1.19.0-rolling-daily",
+      "image": "ghcr.io/perspective0labs/blender:latest",
       "uncompressed_size_mb": 3935,
       "available_tags": [
         "latest",

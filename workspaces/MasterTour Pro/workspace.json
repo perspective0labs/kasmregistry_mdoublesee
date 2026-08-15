@@ -18,7 +18,7 @@
       "cmd": "bash -c \"/opt/mastertour/squashfs-root/AppRun\""
     }
   },
-  "cores": 2,
+  "cores": 1,
   "memory": 2048,
   "notes": "MasterTour Pro 3.9.2. Login with your MasterTour account on first launch.",
   "compatibility": [

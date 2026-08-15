@@ -25,8 +25,8 @@
     "profile_path": "/mnt/kasm_profiles/{username}/{image_id}",
     "max_size_mb": 2048
   },
-  "cores": 2,
-  "memory": 3072,
+  "cores": 1,
+  "memory": 2048,
   "notes": "Shows are stored persistently under ~/MagicQ/shows. Heads and personalities are pre-expanded in the image. MagicQ PC edition — 64 universes fully enabled.",
   "compatibility": [
     {

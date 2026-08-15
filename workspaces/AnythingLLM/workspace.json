@@ -1,6 +1,6 @@
 {
   "friendly_name": "AnythingLLM",
-  "description": "AnythingLLM \u2014 all-in-one AI document chat and assistant platform.",
+  "description": "AnythingLLM — all-in-one AI document chat and assistant platform.",
   "docker_registry": "https://index.docker.io/v1/",
   "image_src": "llm.svg",
   "categories": [
@@ -21,7 +21,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/chrome:1.19.0-rolling-weekly",
+      "image": "ghcr.io/perspective0labs/anythingllm:latest",
       "uncompressed_size_mb": 5000,
       "available_tags": [
         "1.19.0-rolling-weekly",
@@ -29,5 +29,7 @@
       ]
     }
   ],
-  "notes": "Temporary working Kasm fallback: Chrome workspace while native AnythingLLM is run separately or rebuilt on a Kasm base."
+  "notes": "Temporary working Kasm fallback: Chrome workspace while native AnythingLLM is run separately or rebuilt on a Kasm base.",
+  "cores": 0.5,
+  "memory": 1536
 }

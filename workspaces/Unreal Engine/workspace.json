@@ -1,6 +1,6 @@
 {
   "friendly_name": "Unreal Engine",
-  "description": "Unreal Engine 5.8 editor (dev-slim) \u2014 full Linux editor and build tools for real-time 3D, virtual production and pixel streaming projects.",
+  "description": "Unreal Engine 5.8 editor (dev-slim) — full Linux editor and build tools for real-time 3D, virtual production and pixel streaming projects.",
   "docker_registry": "https://index.docker.io/v1/",
   "image_src": "unreal.svg",
   "categories": [
@@ -10,7 +10,7 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Requires GPU agent (gpu_count >= 1) and the NVIDIA Container Toolkit installed on the agent host. Will not run usably on CPU-only agents.\n\nIMPORTANT: ghcr.io/epicgames/unreal-engine is NOT anonymously pullable. The Kasm agent must hold GHCR credentials for an account linked to the EpicGames GitHub organisation, or the pull fails.\n\nFirst pull is ~49 GB \u2014 allow time and disk headroom on the agent.\n\nProjects persist in /{username}/unreal (bound to ~/Documents). The shader cache is persisted separately at ~/.config/Epic; without it shaders recompile on every session.\n\nThis image is an Epic image, not a Kasm image \u2014 it carries no KasmVNC layer. If no desktop appears on launch, a wrapper image (FROM kasmweb/core-ubuntu-jammy + engine files) is required; see docker-builds.\n\nTemporary working Kasm fallback: KasmOS desktop while native Unreal Engine image is too large/private for immediate launch.",
+  "notes": "Requires GPU agent (gpu_count >= 1) and the NVIDIA Container Toolkit installed on the agent host. Will not run usably on CPU-only agents.\n\nIMPORTANT: ghcr.io/epicgames/unreal-engine is NOT anonymously pullable. The Kasm agent must hold GHCR credentials for an account linked to the EpicGames GitHub organisation, or the pull fails.\n\nFirst pull is ~49 GB — allow time and disk headroom on the agent.\n\nProjects persist in /{username}/unreal (bound to ~/Documents). The shader cache is persisted separately at ~/.config/Epic; without it shaders recompile on every session.\n\nThis image is an Epic image, not a Kasm image — it carries no KasmVNC layer. If no desktop appears on launch, a wrapper image (FROM kasmweb/core-ubuntu-jammy + engine files) is required; see docker-builds.\n\nTemporary working Kasm fallback: KasmOS desktop while native Unreal Engine image is too large/private for immediate launch.",
   "run_config": {
     "environment": {
       "NVIDIA_DRIVER_CAPABILITIES": "all",
@@ -32,8 +32,8 @@
     },
     "shm_size": "2gb"
   },
-  "cores": 4,
-  "memory": 16384,
+  "cores": 0.5,
+  "memory": 1536,
   "gpu_count": 1,
   "compatibility": [
     {
@@ -48,7 +48,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/kasmos-desktop:1.19.0-rolling-weekly",
+      "image": "ghcr.io/perspective0labs/unreal-engine:latest",
       "uncompressed_size_mb": 49000,
       "available_tags": [
         "1.19.0-rolling-weekly",

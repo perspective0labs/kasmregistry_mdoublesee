@@ -27,7 +27,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/chrome:1.19.0",
+      "image": "ghcr.io/perspective0labs/openclaw:latest",
       "uncompressed_size_mb": 1800,
       "available_tags": [
         "latest"
@@ -56,5 +56,7 @@
         "gid": 0
       }
     }
-  }
+  },
+  "cores": 0.5,
+  "memory": 1536
 }

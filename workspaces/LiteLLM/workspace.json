@@ -43,12 +43,14 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/chrome:1.19.0-rolling-weekly",
+      "image": "ghcr.io/perspective0labs/litellm:latest",
       "uncompressed_size_mb": 1100,
       "available_tags": [
         "1.19.0-rolling-weekly",
         "1.19.0"
       ]
     }
-  ]
+  ],
+  "cores": 0.5,
+  "memory": 1536
 }

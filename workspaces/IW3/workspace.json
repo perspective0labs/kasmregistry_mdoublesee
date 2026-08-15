@@ -20,7 +20,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/kasmos-desktop:1.19.0-rolling-weekly",
+      "image": "ghcr.io/perspective0labs/iw3:latest",
       "uncompressed_size_mb": 8000,
       "available_tags": [
         "1.19.0-rolling-weekly",

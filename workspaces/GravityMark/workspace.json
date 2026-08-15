@@ -27,5 +27,7 @@
       ]
     }
   ],
-  "notes": "Requires GPU agent (gpu_count ≥ 1). Will not start on CPU-only agents."
+  "notes": "Requires GPU agent (gpu_count ≥ 1). Will not start on CPU-only agents.",
+  "cores": 0.5,
+  "memory": 1536
 }

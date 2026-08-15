@@ -21,7 +21,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/retroarch:1.19.0-rolling-weekly",
+      "image": "ghcr.io/perspective0labs/retroarch:latest",
       "uncompressed_size_mb": 4500,
       "available_tags": [
         "1.19.0-rolling-weekly",
@@ -29,5 +29,7 @@
         "1.19.0"
       ]
     }
-  ]
+  ],
+  "cores": 0.5,
+  "memory": 1536
 }

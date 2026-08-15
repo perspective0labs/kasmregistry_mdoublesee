@@ -20,7 +20,7 @@
     },
     {
       "version": "1.19.x",
-      "image": "kasmweb/telegram:1.19.0-rolling-weekly",
+      "image": "ghcr.io/perspective0labs/telegram:latest",
       "uncompressed_size_mb": 2600,
       "available_tags": [
         "1.19.0-rolling-weekly",
@@ -28,5 +28,7 @@
         "1.19.0"
       ]
     }
-  ]
+  ],
+  "cores": 0.5,
+  "memory": 1536
 }

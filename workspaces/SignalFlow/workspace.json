@@ -48,7 +48,7 @@
   },
   "exec_config": {},
   "notes": "Pulls from GHCR. If the image is private, add GHCR credentials to the Kasm agent before launch.",
-  "cores": 2,
-  "memory": 4096,
+  "cores": 1,
+  "memory": 2048,
   "gpu_count": 0
 }

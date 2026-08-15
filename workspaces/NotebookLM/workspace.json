@@ -13,8 +13,8 @@
   "run_config": {
     "environment": {}
   },
-  "cores": 2,
-  "memory": 2048,
+  "cores": 0.5,
+  "memory": 1536,
   "notes": "Opens NotebookLM as a standalone app in Chromium. Sign in with your Google account on first launch.",
   "compatibility": [
     {
