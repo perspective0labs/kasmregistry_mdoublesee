@@ -1,6 +1,6 @@
 {
   "friendly_name": "GrandMA3 onPC",
-  "description": "MA Lighting grandMA3 onPC v2.4.2.2 \u2014 full show control software running via Wine. Connects to grandMA3 consoles and processing units over MA-Net3. \u2014 Windows VM streaming launcher for Kasm.",
+  "description": "MA Lighting grandMA3 onPC v2.4.2.2 \u2014 show-control software running inside a Kasm Wine container. Connects to MA networks over host networking.",
   "docker_registry": "https://index.docker.io/v1/",
   "image_src": "grandma3.svg",
   "categories": [
@@ -9,18 +9,29 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Windows-only/heavy app entry converted to Kasm 1.19 streaming container. The application will run on the Windows VM/VPS streaming host; this tile launches the remote session instead of trying to run the Windows app inside Linux.",
+  "notes": "Wine container, not a Windows VM streaming tile. Host networking is enabled for MA-Net3 UDP 8700; Art-Net UDP 8000 and sACN UDP 5568. Put the official MA Lighting installer into the persistent /home/kasm-user/grandma-installers folder if the app binary is not already in the Wine prefix.",
   "run_config": {
+    "network_mode": "host",
     "environment": {
-      "TOUCHDESIGNER_STREAM_MODE": "rdp",
-      "TOUCHDESIGNER_STREAM_HOST": "",
-      "TOUCHDESIGNER_STREAM_PORT": "3389",
-      "NVIDIA_VISIBLE_DEVICES": "all",
-      "NVIDIA_DRIVER_CAPABILITIES": "all"
+      "GRANDMA_FLAVOUR": "grandMA3 onPC",
+      "GRANDMA_EXE": "/home/kasm-user/.wine/drive_c/Program Files/MA Lighting Technologies/grandMA3 onPC/grandMA3 onPC.exe",
+      "GRANDMA_INSTALLER_DIR": "/home/kasm-user/grandma-installers"
     },
     "volumes": {
-      "/{username}/windows-stream/remmina": {
-        "bind": "/home/kasm-user/.config/remmina",
+      "/{username}/grandma/installers": {
+        "bind": "/home/kasm-user/grandma-installers",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      },
+      "/{username}/grandma/wine": {
+        "bind": "/home/kasm-user/.wine",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      },
+      "/{username}/grandma/documents": {
+        "bind": "/home/kasm-user/Documents/grandMA",
         "mode": "rw",
         "uid": 1000,
         "gid": 1000
@@ -30,15 +41,16 @@
   },
   "exec_config": {
     "go": {
-      "cmd": "bash -lc '/usr/local/bin/start-touchdesigner-stream.sh'"
+      "cmd": "bash -lc '/usr/local/bin/start-grandma-wine.sh'"
     }
   },
   "compatibility": [
     {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/windows-app-stream:1.19.0",
-      "uncompressed_size_mb": 5200,
+      "image": "ghcr.io/perspective0labs/grandma3-onpc:2.4.2.2",
+      "uncompressed_size_mb": 6500,
       "available_tags": [
+        "2.4.2.2",
         "1.19.0",
         "latest"
       ]
