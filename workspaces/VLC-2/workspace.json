@@ -1,0 +1,72 @@
+{
+  "description": "VLC media player is a free and open-source, portable, cross-platform media player software, and streaming media server.",
+  "docker_registry": "https://kcr.kasmweb.com/v1/",
+  "image_src": "vlc.png",
+  "categories": [
+    "Multimedia"
+  ],
+  "friendly_name": "VLC",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kcr.kasmweb.com/kasmweb/vlc:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2453,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kcr.kasmweb.com/kasmweb/vlc:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2726,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/vlc:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2726,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/vlc:develop",
+      "uncompressed_size_mb": 1162,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/vlc:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "d7730210c591e7258729d438fecf36e18ef43d05"
+}

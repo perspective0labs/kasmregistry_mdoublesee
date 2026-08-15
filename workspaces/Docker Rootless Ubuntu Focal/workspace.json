@@ -1,0 +1,45 @@
+{
+  "description": "Rootless Docker in Docker Desktop image Ubuntu Focal based.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "docker-ubuntu.png",
+  "run_config": {
+    "hostname": "kasm",
+    "privileged": true
+  },
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "notes": "For Ubuntu Noble hosts, Docker-in-Docker rootless images require the rootlesskit AppArmor profile. Include the following in your Docker Run Config Override (JSON) for your workspace to function properly: {\"security_opt\":[\"apparmor=rootlesskit\"]}\n\nAdded 1.19.x registry compatibility shim from nearest official Kasm row so Kasm 1.19 lists this workspace.",
+  "friendly_name": "Docker Rootless Ubuntu Focal",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/ubuntu-focal-dind-rootless:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 3627,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/ubuntu-focal-dind-rootless:develop",
+      "uncompressed_size_mb": 3627,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "69b5c471e2d4c155e364650d44f855d63d3aa839"
+}

@@ -1,0 +1,71 @@
+{
+  "description": "Insomnia API Design Platform",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "insomnia.png",
+  "categories": [
+    "Development"
+  ],
+  "friendly_name": "Insomnia",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/insomnia:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2900,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/insomnia:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 3026,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/insomnia:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 3025,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/insomnia:develop",
+      "uncompressed_size_mb": 1766,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/insomnia:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "4019ac7e0d94e15de0c6a599d407abca64b24e6d"
+}

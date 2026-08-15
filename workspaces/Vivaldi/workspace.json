@@ -1,0 +1,83 @@
+{
+  "description": "Vivaldi is a freeware, cross-platform web browser developed by Vivaldi Technologies.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "vivaldi.svg",
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
+    },
+    "assign": {
+      "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
+    }
+  },
+  "categories": [
+    "Browser"
+  ],
+  "friendly_name": "Vivaldi",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/vivaldi:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2758,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/vivaldi:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2980,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/vivaldi:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2980,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/vivaldi:develop",
+      "uncompressed_size_mb": 1345,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/vivaldi:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "8bc2cd7d597c5ed1d7bd4d08ec91156132f3902f"
+}

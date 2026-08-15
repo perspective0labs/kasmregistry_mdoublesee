@@ -1,0 +1,72 @@
+{
+  "description": "A free and open-source, cross-platform FTP/FTPS application.",
+  "docker_registry": "https://kcr.kasmweb.com/v1/",
+  "image_src": "filezilla.png",
+  "categories": [
+    "Productivity"
+  ],
+  "friendly_name": "FileZilla",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kcr.kasmweb.com/kasmweb/filezilla:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2375,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kcr.kasmweb.com/kasmweb/filezilla:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2591,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/filezilla:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2591,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/filezilla:develop",
+      "uncompressed_size_mb": 1169,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/filezilla:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "1046cd44d29010de674395868d1696b365240cc1"
+}

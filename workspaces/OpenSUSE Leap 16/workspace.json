@@ -1,0 +1,37 @@
+{
+  "description": "OpenSUSE Leap is a new type of hybrid Linux distribution based on SUSE Linux Enterprise.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "opensuse.png",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "friendly_name": "OpenSUSE Leap 16",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/opensuse-16-desktop:develop",
+      "uncompressed_size_mb": 2979,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/opensuse-16-desktop:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "5198cc981ac5300be259b98a5845f4105e685f07"
+}

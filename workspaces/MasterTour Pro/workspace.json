@@ -23,33 +23,6 @@
   "notes": "MasterTour Pro 3.9.2. Login with your MasterTour account on first launch.",
   "compatibility": [
     {
-      "version": "1.16.x",
-      "image": "ghcr.io/perspective0labs/mastertour-kasm:latest",
-      "uncompressed_size_mb": 1800,
-      "available_tags": [
-        "latest",
-        "3.9.2"
-      ]
-    },
-    {
-      "version": "1.17.x",
-      "image": "ghcr.io/perspective0labs/mastertour-kasm:latest",
-      "uncompressed_size_mb": 1800,
-      "available_tags": [
-        "latest",
-        "3.9.2"
-      ]
-    },
-    {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/mastertour-kasm:latest",
-      "uncompressed_size_mb": 1800,
-      "available_tags": [
-        "latest",
-        "3.9.2"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/mastertour-kasm:latest",
       "uncompressed_size_mb": 1800,

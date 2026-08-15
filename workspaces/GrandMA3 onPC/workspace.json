@@ -1,6 +1,6 @@
 {
   "friendly_name": "GrandMA3 onPC",
-  "description": "MA Lighting grandMA3 onPC v2.4.2.2 — full show control software running via Wine. Connects to grandMA3 consoles and processing units over MA-Net3.",
+  "description": "MA Lighting grandMA3 onPC v2.4.2.2 \u2014 full show control software running via Wine. Connects to grandMA3 consoles and processing units over MA-Net3. \u2014 Windows VM streaming launcher for Kasm.",
   "docker_registry": "https://index.docker.io/v1/",
   "image_src": "grandma3.svg",
   "categories": [
@@ -9,32 +9,38 @@
   "architecture": [
     "amd64"
   ],
-  "notes": "Requires Docker Run Config Override: {\"network_mode\": \"host\", \"user\": \"root\"} — host networking is mandatory for MA-Net3 multicast console discovery (UDP 8700). Art-Net on UDP 8000, sACN on UDP 5568. GrandMA3 onPC launches automatically on desktop open.\n\n1.19 fallback uses KasmOS desktop because the original custom image is not currently present/publicly pullable. Replace with the native custom image once published.",
+  "notes": "Windows-only/heavy app entry converted to Kasm 1.19 streaming container. The application will run on the Windows VM/VPS streaming host; this tile launches the remote session instead of trying to run the Windows app inside Linux.",
   "run_config": {
-    "network_mode": "host"
+    "environment": {
+      "TOUCHDESIGNER_STREAM_MODE": "rdp",
+      "TOUCHDESIGNER_STREAM_HOST": "",
+      "TOUCHDESIGNER_STREAM_PORT": "3389",
+      "NVIDIA_VISIBLE_DEVICES": "all",
+      "NVIDIA_DRIVER_CAPABILITIES": "all"
+    },
+    "volumes": {
+      "/{username}/windows-stream/remmina": {
+        "bind": "/home/kasm-user/.config/remmina",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      }
+    },
+    "shm_size": "1gb"
   },
   "exec_config": {
     "go": {
-      "cmd": "bash -c \"WINEPREFIX=/home/kasm-user/.wine wine '/home/kasm-user/.wine/drive_c/Program Files/MA Lighting Technologies/grandMA3 onPC/grandMA3 onPC.exe'\""
+      "cmd": "bash -lc '/usr/local/bin/start-touchdesigner-stream.sh'"
     }
   },
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/grandma3-onpc:2.4.2.2",
-      "uncompressed_size_mb": 6000,
-      "available_tags": [
-        "latest"
-      ]
-    },
-    {
       "version": "1.19.x",
-      "image": "ghcr.io/perspective0labs/grandma3-onpc:2.4.2.2",
-      "uncompressed_size_mb": 6000,
+      "image": "ghcr.io/perspective0labs/windows-app-stream:1.19.0",
+      "uncompressed_size_mb": 5200,
       "available_tags": [
-        "1.19.0-rolling-weekly",
-        "1.19.0-rolling-daily",
-        "1.19.0"
+        "1.19.0",
+        "latest"
       ]
     }
   ]

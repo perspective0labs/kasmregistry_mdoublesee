@@ -1,0 +1,72 @@
+{
+  "description": "An open source voxel game engine.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "minetest.svg",
+  "categories": [
+    "Games"
+  ],
+  "friendly_name": "Minetest",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/minetest:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2364,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/minetest:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2585,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/minetest:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2585,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/minetest:develop",
+      "uncompressed_size_mb": 1169,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/minetest:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "4be3f63626a675e5afe2b4348fae6c4ee39ccc99"
+}

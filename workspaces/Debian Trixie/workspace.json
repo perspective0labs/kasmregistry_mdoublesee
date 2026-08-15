@@ -1,0 +1,58 @@
+{
+  "description": "Debian is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "debian.svg",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "notes": "The Kasm Debian Trixie Workspace requires libseccomp => 2.5.3 to run.\n\nThis can be checked by running runc --version\n\nIf you still want to run Debian Trixie but do not have the minimum required libseccomp version, it can be run in an unsecure manner by adding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) setting above.\n\nNOTE: This will run the Workspace without the docker seccomp sandbox and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n",
+  "friendly_name": "Debian Trixie",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/debian-trixie-desktop:develop",
+      "uncompressed_size_mb": 8878,
+      "available_tags": [
+        "develop",
+        "1.18.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/debian-trixie-desktop:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 8878,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/debian-trixie-desktop:develop",
+      "uncompressed_size_mb": 3989,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/debian-trixie-desktop:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "0b962df108dd15274f3e61e399ba4f41aa894ef5"
+}

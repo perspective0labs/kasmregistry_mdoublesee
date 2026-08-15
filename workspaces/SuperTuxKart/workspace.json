@@ -1,0 +1,61 @@
+{
+  "description": "SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "super-tux-kart.png",
+  "categories": [
+    "Games"
+  ],
+  "notes": "SuperTuxKart requires a GPU for best performance\n\nAdded 1.19.x registry compatibility shim from nearest official Kasm row so Kasm 1.19 lists this workspace.",
+  "friendly_name": "SuperTuxKart",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/super-tux-kart:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 3087,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/super-tux-kart:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 3087,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/super-tux-kart:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 3310,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/super-tux-kart:1.19.0-rolling-weekly",
+      "uncompressed_size_mb": 3310,
+      "available_tags": [
+        "1.19.0-rolling-weekly"
+      ]
+    }
+  ],
+  "sha": "4824caa015fad77cae72ed42cbc2ebbf3e3dcc16"
+}

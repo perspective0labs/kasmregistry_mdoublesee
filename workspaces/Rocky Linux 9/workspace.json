@@ -1,0 +1,75 @@
+{
+  "description": "Rocky Linux is a Linux distribution developed by Rocky Enterprise Software Foundation, which is a privately owned benefit corporation that describes itself as a \"self imposed not-for-profit\".",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "rockylinux.svg",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "notes": "The Kasm Rocky Linux 9 Workspace requires libseccomp => 2.5.3 to run.\n\nThis can be checked by running runc --version\n\nIf you still want to run Rocky Linux 9 but do not have the minimum required libseccomp version, it can be run in an unsecure manner by adding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) setting above.\n\nNOTE: This will run the Workspace without the docker seccomp sandbox and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n",
+  "friendly_name": "Rocky Linux 9",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/rockylinux-9-desktop:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 5507,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/rockylinux-9-desktop:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 8470,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/rockylinux-9-desktop:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 8470,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/rockylinux-9-desktop:develop",
+      "uncompressed_size_mb": 3802,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/rockylinux-9-desktop:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "e32aebd0ee40e2df8afb64320e5dd0495672714f"
+}

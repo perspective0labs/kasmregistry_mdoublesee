@@ -1,0 +1,71 @@
+{
+  "description": "The Collaboration Platform for API Development.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "postman.png",
+  "categories": [
+    "Development"
+  ],
+  "friendly_name": "Postman",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/postman:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 3490,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/postman:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 3369,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/postman:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 3369,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/postman:develop",
+      "uncompressed_size_mb": 1501,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/postman:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "5e916aec03f872658cd33f01f4ce924e29bcc0e3"
+}

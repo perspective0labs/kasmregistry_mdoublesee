@@ -1,0 +1,66 @@
+{
+  "description": "The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime on Ubuntu Jammy.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "nvidia.png",
+  "categories": [
+    "Desktop",
+    "Development"
+  ],
+  "friendly_name": "CUDA Development Toolkit (Ubuntu Jammy)",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/core-cuda-jammy:develop",
+      "uncompressed_size_mb": 11700,
+      "available_tags": [
+        "develop",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/core-cuda-jammy:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 11700,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/core-cuda-jammy:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 11700,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/core-cuda-jammy:develop",
+      "uncompressed_size_mb": 6427,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/core-cuda-jammy:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "4a97df7e1663c19b2d94ddd54b2daf7214223b1a"
+}

@@ -1,0 +1,78 @@
+{
+  "description": "Steam is the ultimate destination for playing, discussing, and creating games.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "steam.png",
+  "categories": [
+    "Games"
+  ],
+  "run_config": {
+    "security_opt": [
+      "seccomp=unconfined"
+    ],
+    "privileged": true
+  },
+  "notes": "The Kasm Steam Workspace is highly experimental.\n\nNOTE: When using NVIDIA, 3D acceleration is provided by VirtualGL, if a game fails to run look into specific launch options that might be needed to leverage VirtualGL.\n",
+  "friendly_name": "Steam",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/steam:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2776,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/steam:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2823,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/steam:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2823,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/steam:develop",
+      "uncompressed_size_mb": 1252,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/steam:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "ed38afa1e76ca4de3f8fdd9fcf1f12da51b54fbb"
+}

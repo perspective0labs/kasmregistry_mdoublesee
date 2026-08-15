@@ -1,0 +1,62 @@
+{
+  "description": "REMnux is a Linux toolkit for reverse-engineering and analyzing malicious software.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "remnux.png",
+  "categories": [
+    "Desktop",
+    "Security",
+    "Development"
+  ],
+  "notes": "A number of applications including VSCode and proxy browser within Burpsuite may require relaxed security in order to run correctly.\n\nAdding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) above may help these programs run with better compatibility.\n\nAdded 1.19.x registry compatibility shim from nearest official Kasm row so Kasm 1.19 lists this workspace.",
+  "friendly_name": "REMnux",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/remnux-focal-desktop:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 11451,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.0",
+      "image": "kasmweb/remnux-noble-desktop:develop",
+      "uncompressed_size_mb": 11451,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/remnux-noble-desktop:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/remnux-noble-desktop:develop",
+      "uncompressed_size_mb": 11451,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    }
+  ],
+  "sha": "352f1df982dc7c59e0f6783d784615f112531a9e"
+}

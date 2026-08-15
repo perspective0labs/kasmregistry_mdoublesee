@@ -11,14 +11,6 @@
   ],
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/telegram:latest",
-      "uncompressed_size_mb": 2600,
-      "available_tags": [
-        "latest"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/telegram:latest",
       "uncompressed_size_mb": 2600,

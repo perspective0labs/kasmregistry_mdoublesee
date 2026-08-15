@@ -18,33 +18,6 @@
   "notes": "Opens NotebookLM as a standalone app in Chromium. Sign in with your Google account on first launch.",
   "compatibility": [
     {
-      "version": "1.16.x",
-      "image": "ghcr.io/perspective0labs/notebooklm-kasm:latest",
-      "uncompressed_size_mb": 2000,
-      "available_tags": [
-        "latest",
-        "1.0.0"
-      ]
-    },
-    {
-      "version": "1.17.x",
-      "image": "ghcr.io/perspective0labs/notebooklm-kasm:latest",
-      "uncompressed_size_mb": 2000,
-      "available_tags": [
-        "latest",
-        "1.0.0"
-      ]
-    },
-    {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/notebooklm-kasm:latest",
-      "uncompressed_size_mb": 2000,
-      "available_tags": [
-        "latest",
-        "1.0.0"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/notebooklm-kasm:latest",
       "uncompressed_size_mb": 2000,

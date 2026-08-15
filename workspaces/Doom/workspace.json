@@ -1,0 +1,72 @@
+{
+  "description": "Doom is a 1993 first-person shooter developed by id Software.",
+  "docker_registry": "https://kcr.kasmweb.com/v1/",
+  "image_src": "doom.png",
+  "categories": [
+    "Games"
+  ],
+  "friendly_name": "Doom",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kcr.kasmweb.com/kasmweb/doom:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2428,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kcr.kasmweb.com/kasmweb/doom:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2624,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/doom:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2624,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/doom:develop",
+      "uncompressed_size_mb": 1186,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/doom:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "aca4d662a33496a0a6e334871768eb4c308c1421"
+}

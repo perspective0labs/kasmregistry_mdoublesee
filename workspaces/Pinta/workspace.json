@@ -1,0 +1,72 @@
+{
+  "description": "An open-source, cross-platform bitmap image drawing and editing program inspired by Paint.NET.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "pinta.png",
+  "categories": [
+    "Multimedia"
+  ],
+  "friendly_name": "Pinta",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/pinta:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2409,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/pinta:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 3352,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/pinta:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 3352,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/pinta:develop",
+      "uncompressed_size_mb": 1813,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/pinta:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "5de873030bb6becc1824428eceb191338a298aba"
+}

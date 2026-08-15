@@ -1,0 +1,40 @@
+{
+  "description": "The CUDA Toolkit includes GPU-accelerated libraries, a compiler, development tools and the CUDA runtime on Ubuntu Focal.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "nvidia.png",
+  "categories": [
+    "Desktop",
+    "Development"
+  ],
+  "friendly_name": "CUDA Development Toolkit",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/core-cuda-focal:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 11088,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/core-cuda-focal:develop",
+      "uncompressed_size_mb": 11088,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "55ca612c13cc093a308e1479ddfd67002eef00d1",
+  "notes": "Added 1.19.x registry compatibility shim from nearest official Kasm row so Kasm 1.19 lists this workspace."
+}

@@ -29,15 +29,6 @@
   },
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "kasmweb/claude-code:1.19.0-rolling-weekly",
-      "uncompressed_size_mb": 5000,
-      "available_tags": [
-        "1.19.0-rolling-weekly",
-        "1.18.0-rolling-weekly"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/claude-code-pro:latest",
       "uncompressed_size_mb": 5000,

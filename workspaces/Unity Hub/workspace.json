@@ -1,0 +1,72 @@
+{
+  "description": "Unity Hub manages multiple installations of Unity Editor, the world’s most popular development platform for creating 2D and 3D multiplatform games and interactive experiences.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "unityhub.png",
+  "categories": [
+    "Multimedia",
+    "Development"
+  ],
+  "friendly_name": "Unity Hub",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/unityhub:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 3607,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/unityhub:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 3478,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/unityhub:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 3478,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/unityhub:develop",
+      "uncompressed_size_mb": 1660,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/unityhub:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "633516abf2d2ba6b8855d19044d7bb8453679b9a"
+}

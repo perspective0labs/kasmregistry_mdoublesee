@@ -1,0 +1,79 @@
+{
+  "description": "Rootless Docker in Docker Desktop image Ubuntu Noble based.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "docker-ubuntu.png",
+  "run_config": {
+    "hostname": "kasm",
+    "privileged": true
+  },
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "notes": "The Kasm Docker Rootless Ubuntu Noble Workspace requires libseccomp => 2.5.3 and Linux Kernel 6.3+ to run.\n\nThis can be checked by running runc --version\n\nIf you still want to run Docker Rootless Ubuntu Noble but do not have the minimum required libseccomp version, it can be run in an unsecure manner by adding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) setting above.\n\nNOTE: This will run the Workspace without the docker seccomp sandbox and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n\nFor Ubuntu Noble hosts, Docker-in-Docker rootless images require the rootlesskit AppArmor profile. Include the following in your Docker Run Config Override (JSON) for your workspace to function properly: {\"security_opt\":[\"apparmor=rootlesskit\"]}\n",
+  "friendly_name": "Docker Rootless Ubuntu Noble",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/ubuntu-noble-dind-rootless:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 4410,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/ubuntu-noble-dind-rootless:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 5001,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/ubuntu-noble-dind-rootless:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 5001,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/ubuntu-noble-dind-rootless:develop",
+      "uncompressed_size_mb": 2061,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/ubuntu-noble-dind-rootless:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "549a1fe4b89d743e91aa4f77a85971e93ca87cb3"
+}

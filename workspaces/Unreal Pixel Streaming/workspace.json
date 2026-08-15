@@ -31,16 +31,6 @@
   "gpu_count": 1,
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "ghcr.io/epicgames/unreal-engine:runtime-pixel-streaming",
-      "uncompressed_size_mb": 474,
-      "available_tags": [
-        "latest",
-        "runtime-pixel-streaming",
-        "runtime"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/unreal-pixel-streaming:latest",
       "uncompressed_size_mb": 474,

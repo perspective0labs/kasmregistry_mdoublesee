@@ -1,0 +1,193 @@
+{
+  "description": "Ubuntu is a Linux distribution based on Debian. This container includes Ubuntu Focal with tools for using popular VPN services.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "ubuntu.png",
+  "run_config": {
+    "environment": {
+      "TAILSCALE_KEY": "",
+      "SHOW_VPN_STATUS": "1",
+      "SHOW_IP_STATUS": "1"
+    },
+    "sysctls": {
+      "net.ipv4.conf.all.src_valid_mark": 1
+    },
+    "dns": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ]
+  },
+  "exec_config": {
+    "first_launch": {
+      "user": "root",
+      "privileged": true,
+      "cmd": "bash -c '/usr/bin/desktop_ready && /dockerstartup/start_vpn.sh'"
+    }
+  },
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "friendly_name": "Ubuntu Focal VPN",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "launch_config": {
+    "file_mapping": {
+      "destination": "/dockerstartup/launch_selections.json"
+    },
+    "launch_form": [
+      {
+        "key": "vpn_service",
+        "label": "VPN Service",
+        "value": null,
+        "allow_saving": true,
+        "required": true,
+        "placeholder": null,
+        "help": "Select the desired VPN service to use",
+        "input_type": "select",
+        "options": [
+          {
+            "value": "openvpn",
+            "label": "OpenVPN"
+          },
+          {
+            "value": "tailscale",
+            "label": "TailScale"
+          },
+          {
+            "value": "wireguard",
+            "label": "WireGuard"
+          }
+        ],
+        "validator_regex": null,
+        "validator_regex_description": null,
+        "display_if": null
+      },
+      {
+        "key": "tailscale_key",
+        "label": "Tailscale Auth Key",
+        "value": null,
+        "allow_saving": true,
+        "placeholder": "tskey-xxx",
+        "required": true,
+        "help": "The Auth key for tailscale",
+        "input_type": "password",
+        "options": [],
+        "validator_regex": "^tskey-[\\w\\-]{0,100}",
+        "validator_regex_description": "Alphanumeric, including underscores and hyphens, Max 100 characters. Must start with tskey-",
+        "display_if": [
+          {
+            "key": "vpn_service",
+            "value_regex": "tailscale"
+          }
+        ]
+      },
+      {
+        "key": "openvpn_config",
+        "label": "OpenVPN Conf",
+        "value": null,
+        "allow_saving": true,
+        "placeholder": "OpenVPN configuration details",
+        "required": true,
+        "help": "The OpenVPN Connection Configuration",
+        "input_type": "passwordtextarea",
+        "options": [],
+        "validator_regex": null,
+        "validator_regex_description": null,
+        "display_if": [
+          {
+            "key": "vpn_service",
+            "value_regex": "openvpn"
+          }
+        ]
+      },
+      {
+        "key": "openvpn_username",
+        "label": "OpenVPN Username",
+        "value": null,
+        "allow_saving": true,
+        "placeholder": "username",
+        "required": true,
+        "help": "The OpenVPN Service Username",
+        "input_type": "text",
+        "options": [],
+        "validator_regex": null,
+        "validator_regex_description": null,
+        "display_if": [
+          {
+            "key": "vpn_service",
+            "value_regex": "openvpn"
+          }
+        ]
+      },
+      {
+        "key": "openvpn_password",
+        "label": "OpenVPN Password",
+        "value": null,
+        "allow_saving": true,
+        "placeholder": "password",
+        "required": true,
+        "help": "The OpenVPN Service Password",
+        "input_type": "password",
+        "options": [],
+        "validator_regex": null,
+        "validator_regex_description": null,
+        "display_if": [
+          [
+            {
+              "key": "vpn_service",
+              "value_regex": "openvpn"
+            }
+          ]
+        ]
+      },
+      {
+        "key": "wireguard_config",
+        "label": "WireGuard Conf",
+        "value": null,
+        "allow_saving": true,
+        "placeholder": null,
+        "required": true,
+        "help": "The WireGuard Connection Configuration",
+        "input_type": "passwordtextarea",
+        "options": [],
+        "validator_regex": null,
+        "validator_regex_description": null,
+        "display_if": [
+          {
+            "key": "vpn_service",
+            "value_regex": "wireguard"
+          }
+        ]
+      }
+    ]
+  },
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/ubuntu-focal-desktop-vpn:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 4535,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/ubuntu-focal-desktop-vpn:develop",
+      "uncompressed_size_mb": 4535,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "4d11b69f75e99a7efc0364288eaadbe572a69b47",
+  "notes": "Added 1.19.x registry compatibility shim from nearest official Kasm row so Kasm 1.19 lists this workspace."
+}

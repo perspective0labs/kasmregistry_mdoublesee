@@ -1,0 +1,74 @@
+{
+  "description": "AlmaLinux is a free and open source Linux distribution, created originally by CloudLinux to provide a community-supported, production-grade enterprise operating system that is binary-compatible with Red Hat Enterprise Linux.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "almalinux.svg",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "friendly_name": "AlmaLinux 8",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/almalinux-8-desktop:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 6528,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/almalinux-8-desktop:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 9700,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/almalinux-8-desktop:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 9700,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/almalinux-8-desktop:develop",
+      "uncompressed_size_mb": 4546,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/almalinux-8-desktop:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "2eab287eb462f3247a837a47db856a6ca3afd90b"
+}

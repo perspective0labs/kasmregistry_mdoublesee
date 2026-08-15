@@ -18,14 +18,6 @@
   },
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "kasmweb/chrome:1.18.0",
-      "uncompressed_size_mb": 2000,
-      "available_tags": [
-        "latest"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/hermes-agent-dashboard-kasm:latest",
       "uncompressed_size_mb": 2000,

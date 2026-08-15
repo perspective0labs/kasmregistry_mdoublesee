@@ -26,17 +26,6 @@
   "memory": 2048,
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "kasmweb/blender:1.18.0-rolling-daily",
-      "uncompressed_size_mb": 3935,
-      "available_tags": [
-        "latest",
-        "1.18.0-rolling-daily",
-        "1.18.0-rolling-weekly",
-        "1.18.0"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/blender:latest",
       "uncompressed_size_mb": 3935,

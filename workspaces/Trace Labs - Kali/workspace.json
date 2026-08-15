@@ -1,0 +1,74 @@
+{
+  "description": "Trace Labs OSINT Image Based on Kali for Kasm Workspaces",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "tracelabs.svg",
+  "run_config": {},
+  "exec_config": {},
+  "categories": [
+    "Productivity"
+  ],
+  "notes": "The Kasm Trace Labs Workspace requires libseccomp => 2.5.3 to run.\n\nThis can be checked by running runc --version\n\nIf you still want to run Trace Labs but do not have the minimum required libseccomp version, it can be run in an unsecure manner by configuring the Docker Run Config Override and Docker Exec Config (JSON) settings above according to the instructions in this article: https://kasmweb.atlassian.net/wiki/x/DgDHMg\n\nNOTE: This will run the Workspace with runtime security modifications and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n\n\nThis image includes software that may not function properly unless the Kasm session is executed with elevated privileges.\n\nPlease see the following documentation for configuring the image to run as root, utilize sudo, or other custom privileges.\n\nhttps://kasmweb.com/docs/latest/how_to/running_as_root.html",
+  "friendly_name": "Trace Labs - Kali",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/tracelabs:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 13152,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/tracelabs:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 13338,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/tracelabs:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 13338,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/tracelabs:develop",
+      "uncompressed_size_mb": 5799,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/tracelabs:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "623d716aeff0eca62ecf41c2f54ae6b0e8cae682"
+}

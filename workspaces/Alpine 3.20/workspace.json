@@ -1,0 +1,64 @@
+{
+  "description": "Alpine Linux is a Linux distribution designed to be small, simple and secure.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "alpine.svg",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "notes": "The Kasm Alpine 3.20 Workspace requires libseccomp => 2.5.3 to run.\n\nThis can be checked by running runc --version\n\nIf you still want to run Alpine 3.20 but do not have the minimum required libseccomp version, it can be run in an unsecure manner by adding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) setting above.\n\nNOTE: This will run the Workspace without the docker seccomp sandbox and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n\nAdded 1.19.x registry compatibility shim from nearest official Kasm row so Kasm 1.19 lists this workspace.",
+  "friendly_name": "Alpine 3.20",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/alpine-320-desktop:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 4590,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/alpine-320-desktop:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 5024,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/alpine-320-desktop:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 5024,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/alpine-320-desktop:develop",
+      "uncompressed_size_mb": 5024,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "48fb61f815464dd3f18539574bacbb1729eaf49f"
+}

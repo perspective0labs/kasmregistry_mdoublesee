@@ -12,14 +12,6 @@
   ],
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/terminal:latest",
-      "uncompressed_size_mb": 1800,
-      "available_tags": [
-        "latest"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/terminal:latest",
       "uncompressed_size_mb": 1800,

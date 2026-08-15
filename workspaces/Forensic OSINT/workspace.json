@@ -1,0 +1,74 @@
+{
+  "description": "Ubuntu desktop with Google Chrome and Forensic OSINT Web Capture Tool",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "forensic-osint.png",
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "categories": [
+    "Productivity"
+  ],
+  "friendly_name": "Forensic OSINT",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/forensic-osint:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 5521,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/forensic-osint:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 5910,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/forensic-osint:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 5910,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/forensic-osint:develop",
+      "uncompressed_size_mb": 2765,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/forensic-osint:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "baacede5919258f3aa308631d2cbd308ddfd8d6e"
+}

@@ -1,0 +1,44 @@
+{
+  "description": "Ubuntu is a Linux distribution based on Debian.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "ubuntu.png",
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "friendly_name": "Ubuntu Focal",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/ubuntu-focal-desktop:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 4483,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/ubuntu-focal-desktop:develop",
+      "uncompressed_size_mb": 4483,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "00d8ab9188212fdd35370215f2e7c5126d951f26",
+  "notes": "Added 1.19.x registry compatibility shim from nearest official Kasm row so Kasm 1.19 lists this workspace."
+}

@@ -1,0 +1,72 @@
+{
+  "description": "GIMP is a cross-platform image editor.",
+  "docker_registry": "https://kcr.kasmweb.com/v1/",
+  "image_src": "gimp.png",
+  "categories": [
+    "Multimedia"
+  ],
+  "friendly_name": "Gimp",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kcr.kasmweb.com/kasmweb/gimp:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2429,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kcr.kasmweb.com/kasmweb/gimp:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2663,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/gimp:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2663,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/gimp:develop",
+      "uncompressed_size_mb": 1419,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/gimp:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "fb3bfdce2df4b5702187455fc6bfc2b0ff9bd007"
+}

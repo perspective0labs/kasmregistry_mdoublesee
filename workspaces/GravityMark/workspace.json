@@ -11,14 +11,6 @@
   ],
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/gravitymark:latest",
-      "uncompressed_size_mb": 4000,
-      "available_tags": [
-        "latest"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/gravitymark:latest",
       "uncompressed_size_mb": 4000,

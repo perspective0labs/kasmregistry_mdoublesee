@@ -1,0 +1,66 @@
+{
+  "description": "Cyberbro is a cybersecurity analysis tool that extracts your IoCs from garbage input and checks their reputation using multiple CTI services.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "cyberbro.png",
+  "categories": [
+    "Security"
+  ],
+  "friendly_name": "Cyberbro",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/cyberbro:develop",
+      "uncompressed_size_mb": 4280,
+      "available_tags": [
+        "develop",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/cyberbro:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 4280,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/cyberbro:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 4280,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/cyberbro:develop",
+      "uncompressed_size_mb": 1742,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/cyberbro:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "53ecf1bed2cc695b3d61a4f52f1d778b9c85b74c"
+}

@@ -1,5 +1,5 @@
 {
-  "friendly_name": "Hermes Agent",
+  "friendly_name": "Hermes Agent Full Stack",
   "description": "NousResearch Hermes Agent with Kori-x real-time dashboard. Built-in s6-overlay supervision runs the gateway, built-in dashboard, and Kori-x monitoring UI together in one container.",
   "docker_registry": "https://index.docker.io/v1/",
   "image_src": "hermes-agent.svg",
@@ -35,14 +35,6 @@
     }
   },
   "compatibility": [
-    {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/hermes-agent-dashboard:latest",
-      "uncompressed_size_mb": 4200,
-      "available_tags": [
-        "latest"
-      ]
-    },
     {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/hermes-agent-dashboard-kasm:latest",

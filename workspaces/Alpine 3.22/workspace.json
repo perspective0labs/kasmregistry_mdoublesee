@@ -1,0 +1,38 @@
+{
+  "description": "Alpine Linux is a Linux distribution designed to be small, simple and secure.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "alpine.svg",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "notes": "The Kasm Alpine 3.22 Workspace requires libseccomp => 2.5.3 to run.\n\nThis can be checked by running runc --version\n\nIf you still want to run Alpine 3.22 but do not have the minimum required libseccomp version, it can be run in an unsecure manner by adding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) setting above.\n\nNOTE: This will run the Workspace without the docker seccomp sandbox and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n",
+  "friendly_name": "Alpine 3.22",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/alpine-322-desktop:develop",
+      "uncompressed_size_mb": 2279,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/alpine-322-desktop:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "39ce4257b371f15293eb6bbef6737a61f2cd6918"
+}

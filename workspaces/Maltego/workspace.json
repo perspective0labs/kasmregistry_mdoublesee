@@ -1,0 +1,73 @@
+{
+  "description": "Maltego for Kasm Workspaces ",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "maltego.png",
+  "run_config": {},
+  "exec_config": {},
+  "categories": [
+    "Productivity"
+  ],
+  "friendly_name": "Maltego",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/maltego:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 3107,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/maltego:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 3474,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/maltego:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 3474,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/maltego:develop",
+      "uncompressed_size_mb": 1639,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/maltego:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "3d485bd50af3d75eb6c3f99d5345191d3f9162d0"
+}

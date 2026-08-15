@@ -1,0 +1,72 @@
+{
+  "description": "qBittorrent aims to provide an open-source software alternative to µTorrent.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "qbittorrent.png",
+  "categories": [
+    "Productivity"
+  ],
+  "friendly_name": "qBittorrent",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/qbittorrent:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 2398,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/qbittorrent:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 2617,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/qbittorrent:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 2617,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/qbittorrent:develop",
+      "uncompressed_size_mb": 1181,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/qbittorrent:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "eabc7f14509317d27f41c5d75260e43726d206a9"
+}

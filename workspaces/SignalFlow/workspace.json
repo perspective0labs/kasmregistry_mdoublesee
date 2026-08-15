@@ -7,15 +7,6 @@
   ],
   "compatibility": [
     {
-      "version": "1.18.x",
-      "image": "ghcr.io/perspective0labs/signalflow-kasm-workspace:2.24.0",
-      "uncompressed_size_mb": 4500,
-      "available_tags": [
-        "2.24.0",
-        "latest"
-      ]
-    },
-    {
       "version": "1.19.x",
       "image": "ghcr.io/perspective0labs/signalflow-kasm-workspace:2.24.0",
       "uncompressed_size_mb": 4500,

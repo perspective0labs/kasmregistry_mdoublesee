@@ -1,0 +1,59 @@
+{
+  "friendly_name": "TouchDesigner",
+  "description": "Derivative TouchDesigner remote workspace for Kasm. Launches a streaming/RDP session to the Windows VM that will host video-heavy Windows applications.",
+  "docker_registry": "https://ghcr.io",
+  "image_src": "touchdesigner.svg",
+  "categories": [
+    "Multimedia",
+    "Development",
+    "Creative",
+    "VJ"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "notes": "TouchDesigner is Windows/macOS only in Derivative public downloads checked on derivative.ca/download, /experimental, and /archive. This Kasm workspace is intentionally a streaming launcher for the Windows VM on the VPS, not a Wine container.",
+  "run_config": {
+    "environment": {
+      "TOUCHDESIGNER_STREAM_MODE": "rdp",
+      "TOUCHDESIGNER_STREAM_HOST": "",
+      "TOUCHDESIGNER_STREAM_PORT": "3389",
+      "NVIDIA_VISIBLE_DEVICES": "all",
+      "NVIDIA_DRIVER_CAPABILITIES": "all"
+    },
+    "volumes": {
+      "/{username}/touchdesigner/projects": {
+        "bind": "/home/kasm-user/Documents/TouchDesigner",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      },
+      "/{username}/touchdesigner/remmina": {
+        "bind": "/home/kasm-user/.config/remmina",
+        "mode": "rw",
+        "uid": 1000,
+        "gid": 1000
+      }
+    },
+    "shm_size": "1gb"
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -lc '/usr/local/bin/start-touchdesigner-stream.sh'"
+    }
+  },
+  "cores": 1,
+  "memory": 4096,
+  "gpu_count": 0,
+  "compatibility": [
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/perspective0labs/touchdesigner-stream:1.19.0",
+      "uncompressed_size_mb": 5200,
+      "available_tags": [
+        "1.19.0",
+        "latest"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "description": "Debian is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "debian.svg",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "friendly_name": "Debian Bullseye",
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "kasmweb/debian-bullseye-desktop:1.16.1-rolling-daily",
+      "uncompressed_size_mb": 4212,
+      "available_tags": [
+        "develop",
+        "1.16.0",
+        "1.16.0-rolling-weekly",
+        "1.16.0-rolling-daily",
+        "1.16.1",
+        "1.16.1-rolling-weekly",
+        "1.16.1-rolling-daily",
+        "1.17.0-rolling-weekly"
+      ]
+    },
+    {
+      "version": "1.17.0",
+      "image": "kasmweb/debian-bullseye-desktop:1.17.0-rolling-daily",
+      "uncompressed_size_mb": 7755,
+      "available_tags": [
+        "develop",
+        "1.17.0",
+        "1.17.0-rolling-weekly",
+        "1.17.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "kasmweb/debian-bullseye-desktop:1.18.0-rolling-daily",
+      "uncompressed_size_mb": 7755,
+      "available_tags": [
+        "develop",
+        "1.18.0",
+        "1.18.0-rolling-weekly",
+        "1.18.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "kasmweb/debian-bullseye-desktop:develop",
+      "uncompressed_size_mb": 3783,
+      "available_tags": [
+        "develop",
+        "1.19.0",
+        "1.19.0-rolling-weekly",
+        "1.19.0-rolling-daily"
+      ]
+    },
+    {
+      "version": "1.20.x",
+      "image": "kasmweb/debian-bullseye-desktop:develop",
+      "uncompressed_size_mb": 0,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ],
+  "sha": "c564ea6e40bb46203b517dd3c08638ff3cd64c01"
+}
